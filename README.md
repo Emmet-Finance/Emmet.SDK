@@ -1,6 +1,6 @@
 # Emmet.SDK
 
-As the developers of `Emmet.SDK`, our primary goal is to create a versatile and robust library that seamlessly integrates the `Emmet.Bridge` functionality into front-end applications. With `Emmet.`Bridge`, we aim to establish a reliable and efficient connection between over 60 EVM chains and more than 40 non-EVM chains.
+As the developers of `Emmet.SDK`, our primary goal is to create a versatile and robust library that seamlessly integrates the `Emmet.Bridge` functionality into front-end applications. With `Emmet.Bridge`, we aim to establish a reliable and efficient connection between over 60 EVM chains and more than 40 non-EVM chains.
 
 By leveraging the power of `Emmet.SDK`, developers can effortlessly harness the capabilities of `Emmet.Bridge`, enabling seamless communication and interoperability across various blockchain networks. With support for a wide range of EVM chains, including popular networks like Ethereum, Binance Smart Chain, and many others, along with compatibility with numerous non-EVM chains, our library provides developers with a comprehensive solution for building applications that interact with diverse blockchain ecosystems.
 
