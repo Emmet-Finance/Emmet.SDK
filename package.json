@@ -1,0 +1,27 @@
+{
+  "name": "emmet.sdk",
+  "version": "0.0.1",
+  "description": "Emmet.Bridge SDK library",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emmet-Finance/Emmet.SDK.git"
+  },
+  "keywords": [
+    "SDK",
+    "Fungible",
+    "Token",
+    "Bridge",
+    "Blockchain",
+    "WEB3"
+  ],
+  "author": "Mithras.Emmet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Emmet-Finance/Emmet.SDK/issues"
+  },
+  "homepage": "https://github.com/Emmet-Finance/Emmet.SDK#readme"
+}
