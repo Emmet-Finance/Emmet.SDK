@@ -16,7 +16,10 @@
     "Token",
     "Bridge",
     "Blockchain",
-    "WEB3"
+    "WEB3",
+    "Emmet.Finance",
+    "Emmet.Bridge",
+    "Emmet.SDK"
   ],
   "author": "Mithras.Emmet",
   "license": "MIT",
