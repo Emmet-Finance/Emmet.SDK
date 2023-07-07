@@ -1,3 +1,5 @@
+import { TEnvironment } from "./src/enums/environment";
+
 export {}; //The file is purely for type declarations and does not export any runtime code.
 
 declare global {                // Auguments the global namespace in TS
@@ -9,5 +11,9 @@ declare global {                // Auguments the global namespace in TS
             isCoinbaseWallet?:  boolean;    // flag
             isMetaMask?:        boolean;    // flag
         };
+    }
+
+    interface Environment {     // Global Environment
+        current: TEnvironment   // Mainnet | Testnet
     }
 }
