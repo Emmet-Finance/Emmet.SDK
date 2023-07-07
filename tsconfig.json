@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "lib": ["es6", "dom", "dom.iterable"],
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "removeComments": true,
+        "strict": false,
+        "target": "es6",
+        "outDir": "dist"
+    },
+    "include": [
+        "global.d.ts",
+        "src/**/*"
+    ],
+    "exclude": [
+        "dist",
+        "node_modules",
+        "example"
+    ]
+}
