@@ -84,6 +84,5 @@ export {
     // Wallets
     CoinbaseWalletProvider,
     MetaMaskWalletProvider,
-    WalletProvider
-
+    WalletProvider,
 }
