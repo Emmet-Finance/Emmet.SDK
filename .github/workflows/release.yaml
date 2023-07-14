@@ -1,38 +1,39 @@
-name: Libruary build
+name: Library build
 
 on:
   push:
-    branches:
-      - "main"
-    
-    workflow_dispatch:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
-  jobs:
-    build:
-      runs-on: ubuntu-latest
-      name: Build & Push
-      steps:
-        - name: git-checkout
-        uses: actions/checkout@v2
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-        - name: setup node.js
-        uses: actions/setup-node@v2.4.0
-        with:
-          node-version: 18.16.0
+    strategy:
+      matrix:
+        node-version: [18.x]
 
-        - name: install dependencies
-        run: yarn
+    steps:
+    - uses: actions/checkout@v3
 
-        - name: build
-        run: yarn build
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
 
-        - name: prepare the package
-        run: mkdir out && mv package.json out && mv dist out && mv README.md out && mv LICENSE out && mv docs out
-        uses: s0/git-publish-subdir-action@production
-        if: ${{ github.ref == 'refs/heads/main'}}
-        env:
-          REPO: self
-          BRANCH: production
-          FOLDER: out
-          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
-          MESSAGE: "Build: ({sha}) {msg}"
+    - name: Install dependencies
+      run: |
+        yarn
+        yarn build
+
+    - name: prepare the package
+    run: mkdir out && mv package.json out && mv dist out && mv README.md out && mv LICENSE out && mv docs out
+    uses: s0/git-publish-subdir-action@production
+    if: ${{ github.ref == 'refs/heads/main'}}
+    env:
+      REPO: self
+      BRANCH: production
+      FOLDER: out
+      GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+      MESSAGE: "Build: ({sha}) {msg}"
