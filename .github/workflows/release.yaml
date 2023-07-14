@@ -43,5 +43,5 @@ jobs:
         REPO: self
         BRANCH: production
         FOLDER: out
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         MESSAGE: "Build: ({sha}) {msg}"
