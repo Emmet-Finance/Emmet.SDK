@@ -28,13 +28,13 @@ jobs:
         yarn build
 
     - name: prepare package
-        run: |
-          mkdir out
-          mv package.json out
-          mv dist out
-          mv README.md out
-          mv LICENSE out
-          mv docs out
+      run: |
+        mkdir out
+        mv package.json out
+        mv dist out
+        mv README.md out
+        mv LICENSE out
+        mv docs out
 
     - name: Prepare Production Release
         uses: s0/git-publish-subdir-action@develop
