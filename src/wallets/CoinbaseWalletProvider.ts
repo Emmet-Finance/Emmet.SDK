@@ -1,5 +1,5 @@
 import { ethers } from 'ethers';
-import WalletProvider from './WalletProvider';
+import WalletProvider from './WalletProvider.js';
 
 export default class CoinbaseWalletProvider extends WalletProvider {
     private readonly deeplinkURL = `https://go.cb-w.com/dapp?cb_url=${window.location.href}`;

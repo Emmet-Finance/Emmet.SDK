@@ -1,5 +1,5 @@
 import { ethers } from 'ethers';
-import WalletProvider from './WalletProvider';
+import WalletProvider from './WalletProvider.js';
 
 export default class MetaMaskWalletProvider extends WalletProvider {
     private readonly deeplinkURL = `https://metamask.app.link/dapp/${window.location.href}`;

@@ -1,5 +1,5 @@
 import { Web3Provider } from '@ethersproject/providers';
-import { IWalletProvider } from '../interfaces/wallet';
+import { IWalletProvider } from '../interfaces/wallet.js';
 
 export default abstract class WalletProvider implements IWalletProvider {
 
