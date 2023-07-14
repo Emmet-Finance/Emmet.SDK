@@ -22,14 +22,14 @@ To download the `Emmet.SDK` library from the specified GitHub repository and ins
 
 ### npm
 ```bash
-npm install https://github.com/Emmet-Finance/Emmet.SDK.git
+npm install https://github.com/Emmet-Finance/Emmet.SDK.git#production
 ```
 ### yarn
 ```bash
-yarn add https://github.com/Emmet-Finance/Emmet.SDK.git
+yarn add https://github.com/Emmet-Finance/Emmet.SDK.git#production
 ```
 
 ### pnpm
 ```bash
-pnpm add https://github.com/Emmet-Finance/Emmet.SDK.git
+pnpm add https://github.com/Emmet-Finance/Emmet.SDK.git#production
 ```
