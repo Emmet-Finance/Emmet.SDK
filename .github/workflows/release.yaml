@@ -37,11 +37,11 @@ jobs:
         mv docs out
 
     - name: Prepare Production Release
-        uses: s0/git-publish-subdir-action@develop
-        if: ${{ github.ref == 'refs/heads/main' }}
-        env:
-          REPO: self
-          BRANCH: production
-          FOLDER: out
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MESSAGE: "Build: ({sha}) {msg}"
+      uses: s0/git-publish-subdir-action@develop
+      if: ${{ github.ref == 'refs/heads/main' }}
+      env:
+        REPO: self
+        BRANCH: production
+        FOLDER: out
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        MESSAGE: "Build: ({sha}) {msg}"
