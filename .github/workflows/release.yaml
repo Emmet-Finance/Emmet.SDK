@@ -26,14 +26,3 @@ jobs:
       run: |
         yarn
         yarn build
-
-    - name: prepare the package
-    run: mkdir out && mv package.json out && mv dist out && mv README.md out && mv LICENSE out && mv docs out
-    uses: s0/git-publish-subdir-action@production
-    if: ${{ github.ref == 'refs/heads/main'}}
-    env:
-      REPO: self
-      BRANCH: production
-      FOLDER: out
-      GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
-      MESSAGE: "Build: ({sha}) {msg}"
