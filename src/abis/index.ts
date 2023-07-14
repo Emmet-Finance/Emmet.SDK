@@ -1,8 +1,8 @@
-import BUSD     from "./busd";
-import DAI      from "./dai";
-import FTBridge from "./FTBridge";
-import USDT     from "./usdt";
-import WERC20   from "./WrappedERC20";
+import BUSD     from "./busd.js";
+import DAI      from "./dai.js";
+import FTBridge from "./FTBridge.js";
+import USDT     from "./usdt.js";
+import WERC20   from "./WrappedERC20.js";
 
 export {
     BUSD,

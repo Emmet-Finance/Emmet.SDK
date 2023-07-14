@@ -17,7 +17,7 @@
             "https://endpoints.omniatech.io/v1/eth/goerli/public"
         ]
     },
-    "bsc": {
+    "tbsc": {
         "bridge": "0x8c1f71AcE61b152bD2224736813410aD690F68cD",
         "chainName": "BSC",
         "chainId": "0x61",
