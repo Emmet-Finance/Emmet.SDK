@@ -4,7 +4,7 @@
         "chainName": "Goerly",
         "chainId": "0x5",
         "explorer": "https://goerli.etherscan.io",
-        "logo":"eth.svg",
+        "logo": "eth.svg",
         "nativeCurrency": {
             "name": "ETH",
             "symbol": "ETH",
@@ -22,7 +22,7 @@
         "chainName": "BSC",
         "chainId": "0x61",
         "explorer": "https://testnet.bscscan.com",
-        "logo":"bnb.svg",
+        "logo": "bnb.svg",
         "nativeCurrency": {
             "name": "tBNB",
             "symbol": "tBNB",
@@ -45,7 +45,7 @@
         "chainName": "Mumbai",
         "chainId": "0x13881",
         "explorer": "https://mumbai.polygonscan.com",
-        "logo":"polygon.svg",
+        "logo": "polygon.svg",
         "nativeCurrency": {
             "name": "MATIC",
             "symbol": "MATIC",
@@ -65,7 +65,7 @@
         "chainName": "Sparknet",
         "chainId": "0x7b",
         "explorer": "https://explorer.fusespark.io/",
-        "logo":"fuse.svg",
+        "logo": "fuse.svg",
         "nativeCurrency": {
             "name": "SPARK",
             "symbol": "SPARK",

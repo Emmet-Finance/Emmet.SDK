@@ -4,7 +4,7 @@
         "chainName": "Ethereum",
         "chainId": "0x1",
         "explorer": "https://etherscan.io",
-        "logo":"eth.svg",
+        "logo": "eth.svg",
         "nativeCurrency": {
             "name": "ETH",
             "symbol": "ETH",
@@ -25,7 +25,7 @@
         "chainName": "BSC",
         "chainId": "0x38",
         "explorer": "https://bscscan.com",
-        "logo":"bnb.svg",
+        "logo": "bnb.svg",
         "nativeCurrency": {
             "name": "BNB",
             "symbol": "BNB",
@@ -51,7 +51,7 @@
         "chainName": "Polygon",
         "chainId": "0x89",
         "explorer": "https://polygonscan.com",
-        "logo":"polygon.svg",
+        "logo": "polygon.svg",
         "nativeCurrency": {
             "name": "MATIC",
             "symbol": "MATIC",
@@ -74,7 +74,7 @@
         "chainName": "Fuse",
         "chainId": "0x7a",
         "explorer": "https://explorer.fuse.io",
-        "logo":"fuse.svg",
+        "logo": "fuse.svg",
         "nativeCurrency": {
             "name": "FUSE",
             "symbol": "FUSE",
