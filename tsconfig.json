@@ -16,7 +16,8 @@
     },
     "include": [
         "global.d.ts",
-        "src/**/*"
+        "src/**/*",
+        "src/**/*.svg"
     ],
     "exclude": [
         "dist",

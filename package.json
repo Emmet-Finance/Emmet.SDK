@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/Emmet-Finance/Emmet.SDK#readme",
   "dependencies": {
+    "bignumber.js": "^9.1.1",
     "ethers": "5.7",
     "typescript": "^5.1.6"
   },

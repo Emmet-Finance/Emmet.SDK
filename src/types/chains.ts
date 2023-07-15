@@ -36,16 +36,39 @@ export const EVMMainnetNames:string[] = Object.keys(mainnets);
  */
 export const EVMTestnetNames:string[] = Object.keys(testnets);
 
+/**
+ * Hashmap: {key:chainName, value:chainId}
+ */
+export let MAINNET_CHAIN_IDS = {};
+
+/**
+ * Hashmap: {key:chainName, value:chainId}
+ */
+export let TESTNET_CHAIN_IDS ={};
+
+/**
+ * Hashmap: {key:chainId, value:chainName}
+ */
+export let MAINNET_CHAIN_ID_TO_NAME = {};
+
+/**
+ * Hashmap: {key:chainId, value:chainName}
+ */
+export let TESTNET_CHAIN_ID_TO_NAME ={};
+
 
 export let EVMMainnets: EVMChainMap = {};
 EVMMainnetNames.map((chainName:MainnetEVMName) => {
     // TypeChecked chain params
     EVMMainnets[chainName] = mainnets[chainName] as EVMChain;
+    MAINNET_CHAIN_IDS[chainName] = mainnets[chainName].chainId;
+    MAINNET_CHAIN_ID_TO_NAME[mainnets[chainName].chainId] = chainName;
 })
 
 export let EVMTestnets: EVMChainMap = {};
 EVMTestnetNames.map((chainName:TestnetEVMName) => {
     // TypeChecked chain params
     EVMTestnets[chainName] = testnets[chainName] as EVMChain;
+    TESTNET_CHAIN_IDS[chainName] = testnets[chainName].chainId;
+    TESTNET_CHAIN_ID_TO_NAME[testnets[chainName].chainId] = chainName;
 })
-

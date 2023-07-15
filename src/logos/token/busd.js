@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336.41 337.42">
+const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336.41 337.42">
     <defs>
         <style>.cls-1{fill:#f0b90b;stroke:#f0b90b;}</style>
     </defs>
@@ -11,4 +11,5 @@
             <path class="cls-1" d="M294.2,126.71l41.5,42.5L168.2,336.71l-41.5-41.5Z"/>
         </g>
     </g>
-</svg>
+</svg>`;
+export default svg;

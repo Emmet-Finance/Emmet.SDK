@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+const bnb = `<?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 2496 2496" style="enable-background:new 0 0 2496 2496;" xml:space="preserve">
@@ -17,4 +17,5 @@
 		L968,889.8l279.5,165.8l281.2-165.8l164.1,96.6H1692.1L1692.1,986.4z M803.9,656.5l443.7-261.6l444.5,261.6l-163.3,96.6
 		l-281.2-165.8L967.2,753.1L803.9,656.5L803.9,656.5z"/>
 </g>
-</svg>
+</svg>`
+export default bnb;

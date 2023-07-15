@@ -24,3 +24,8 @@ declare global {                // Auguments the global namespace in TS
         current: TEnvironment   // Mainnet | Testnet
     }
 }
+
+declare module '*.svg' {
+    const content: string;
+    export default content;
+  }

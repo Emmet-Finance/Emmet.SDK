@@ -7,6 +7,12 @@ import {
     WERC20
 } from './abis/index.js';
 
+// Logos
+import {
+    CHAIN_LOGOS,
+    TOKEN_LOGOS,
+} from './logos/index.js'
+
 import {
     // Chains
     EVMChain,
@@ -16,6 +22,10 @@ import {
     EVMTestnetNames,
     MainnetEVMName,
     TestnetEVMName,
+    MAINNET_CHAIN_IDS,
+    MAINNET_CHAIN_ID_TO_NAME,
+    TESTNET_CHAIN_IDS,
+    TESTNET_CHAIN_ID_TO_NAME,
     // Tokens
     ContractAddress,
     SupportedTokenType,
@@ -26,6 +36,7 @@ import {
     EVMChainMap,
     IConnectedWallet,
     IWalletProvider,
+    Window,
 } from './interfaces/index.js';
 
 // Enums
@@ -33,20 +44,11 @@ import {TEnvironment} from './enums/environment.js';
 
 // Wallets
 import {
-    CoinbaseWalletProvider,
-    MetaMaskWalletProvider,
-    WalletProvider
+    //CoinbaseWalletProvider,
+    // MetaMaskWalletProvider,
+    // WalletProvider,
 } from './wallets/index.js'
-
-// Chain logos
-const logo_bnb = require('./logos/chain/bnb.svg')
-const logo_eth = require('./logos/chain/eth.svg')
-const logo_fuse = require('./logos/chain/fuse.svg')
-const logo_poly = require('./logos/chain/polygon.svg')
-// Token Logos
-const logo_busd = require('./logos/token/busd.svg')
-const logo_dai = require('./logos/token/dai.svg')
-const logo_usdt = require('./logos/token/usdt.svg')
+import { log } from 'console';
 
 export {
     // ABIs
@@ -55,7 +57,17 @@ export {
     FTBridge,
     USDT,
     WERC20,
-    // Chains
+    // Logos
+    CHAIN_LOGOS,
+    TOKEN_LOGOS,
+    // Enums
+    TEnvironment,
+    // Interfaces
+    EVMChainMap,
+    IConnectedWallet,
+    IWalletProvider,
+    Window,
+    // Types: Chains
     EVMChain,
     EVMMainnets,
     EVMTestnets,
@@ -63,27 +75,19 @@ export {
     EVMTestnetNames,
     MainnetEVMName,
     TestnetEVMName,
-    // Chain logos
-    logo_bnb,
-    logo_eth,
-    logo_fuse,
-    logo_poly,
-    // Token Logos
-    logo_busd,
-    logo_dai,
-    logo_usdt,
-    // Enums
-    TEnvironment,
-    // Interfaces
-    EVMChainMap,
-    IConnectedWallet,
-    IWalletProvider,
-    // Tokens
+    MAINNET_CHAIN_IDS,
+    MAINNET_CHAIN_ID_TO_NAME,
+    TESTNET_CHAIN_IDS,
+    TESTNET_CHAIN_ID_TO_NAME,
+    // Types: Tokens
     ContractAddress,
     SupportedTokenType,
     // Wallets
-    CoinbaseWalletProvider,
-    MetaMaskWalletProvider,
-    WalletProvider,
-    
+    //CoinbaseWalletProvider,
+    // MetaMaskWalletProvider,
+    // WalletProvider,
+
 }
+
+log(MAINNET_CHAIN_IDS)
+log(MAINNET_CHAIN_ID_TO_NAME)
