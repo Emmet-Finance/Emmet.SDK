@@ -1,6 +1,6 @@
 import { TEnvironment } from "./src/enums/environment.ts";
 
-export {}; //The file is purely for type declarations and does not export any runtime code.
+export { }; //The file is purely for type declarations and does not export any runtime code.
 
 interface MetaMaskEthereumProvider { // Metamask Interface
     isMetaMask?: boolean;
@@ -10,13 +10,13 @@ interface MetaMaskEthereumProvider { // Metamask Interface
     addListener?(eventName: string | symbol, listener: (...args: any[]) => void): this;
     removeListener(eventName: string | symbol, listener: (...args: any[]) => void): this;
     removeAllListeners?(event?: string | symbol): this;
-  }
+}
 
 declare global {                // Auguments the global namespace in TS
     interface Window {          // Global browser object in JS
         ethereum: MetaMaskEthereumProvider & { // Metamask+ interface
-            providers:          any;        // ethereum provider
-            isCoinbaseWallet?:  boolean;    // flag
+            providers: any;        // ethereum provider
+            isCoinbaseWallet?: boolean;    // flag
         };
     }
 
@@ -24,8 +24,3 @@ declare global {                // Auguments the global namespace in TS
         current: TEnvironment   // Mainnet | Testnet
     }
 }
-
-declare module '*.svg' {
-    const content: string;
-    export default content;
-  }

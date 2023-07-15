@@ -1,17 +1,30 @@
 // ABIs
-import {
-    BUSD,
-    DAI,
-    FTBridge,
-    USDT,
-    WERC20
-} from './abis/index.js';
+import BUSD     from "../abis/busd.json" assert { type: "json" };
+import DAI      from "../abis/dai.json" assert { type: "json" };
+import FTBridge from "../abis/FTBridge.json" assert { type: "json" };
+import USDT     from "../abis/usdt.json" assert { type: "json" };
+import WERC20   from "../abis/WrappedERC20.json" assert { type: "json" };
 
-// Logos
-import {
-    CHAIN_LOGOS,
-    TOKEN_LOGOS,
-} from './logos/index.js'
+// DATA
+import MAINNETS from "../data/mainnet.json" assert { type: "json" };
+import TESTNETS from "../data/testnet.json" assert { type: "json" };
+import MAINNET_TOKENS from "../data/mainnetTokens.json" assert { type: "json" };
+import TESTNET_TOKENS from "../data/testnetTokens.json" assert { type: "json" };
+
+// Logos:Chains
+import{
+    LOGO_BSC,
+    LOGO_ETHEREUM,
+    LOGO_FUSE,
+    LOGO_POLYGON,
+} from './logos/chains.js';
+
+// Logos:Tokens
+import{
+    LOGO_BUSD,
+    LOGO_DAI,
+    LOGO_USDT,
+} from './logos/tokens.js'
 
 import {
     // Chains
@@ -48,7 +61,7 @@ import {
     // MetaMaskWalletProvider,
     // WalletProvider,
 } from './wallets/index.js'
-import { log } from 'console';
+
 
 export {
     // ABIs
@@ -57,9 +70,20 @@ export {
     FTBridge,
     USDT,
     WERC20,
-    // Logos
-    CHAIN_LOGOS,
-    TOKEN_LOGOS,
+    // DATA
+    MAINNETS,
+    TESTNETS,
+    MAINNET_TOKENS,
+    TESTNET_TOKENS,
+    // Logos: Chains
+    LOGO_BSC,
+    LOGO_ETHEREUM,
+    LOGO_FUSE,
+    LOGO_POLYGON,
+    //Logos:Tokens
+    LOGO_BUSD,
+    LOGO_DAI,
+    LOGO_USDT,
     // Enums
     TEnvironment,
     // Interfaces

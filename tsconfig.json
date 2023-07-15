@@ -17,14 +17,20 @@
     "include": [
         "global.d.ts",
         "src/**/*",
-        "src/**/*.js"
+        "logos/**/*.svg", 
+        "abis",
+        "data"
     ],
+    "hooks": [ "copy-files" ],
     "exclude": [
         "dist",
         "node_modules",
+        "src/**/*.txt",
+        "tsconfig.json"
     ],
     "lib": [
         "ESNext" /* ESNext includes new Level-4 features that were
                  recently added to the ECMA-262 JS spec */
        ],
+
 }
