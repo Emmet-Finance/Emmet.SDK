@@ -88,6 +88,3 @@ export {
     // WalletProvider,
 
 }
-
-log(MAINNET_CHAIN_IDS)
-log(MAINNET_CHAIN_ID_TO_NAME)
