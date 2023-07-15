@@ -1,32 +1,44 @@
-import { ethers } from 'ethers';
-import WalletProvider from './WalletProvider.js';
+// /// <reference lib="webworker" />
 
-export default class MetaMaskWalletProvider extends WalletProvider {
-    private readonly deeplinkURL = `https://metamask.app.link/dapp/${window.location.href}`;
+// import { ethers } from 'ethers';
+// import WalletProvider from './WalletProvider.js';
 
-    public async getWeb3Provider() {
-        let metamaskProvider: any = window?.ethereum?.isMetaMask
-            ? window?.ethereum
-            : undefined;
+// const anyWindow: any = (window as any);
 
-        if (window?.ethereum?.providers?.length) {
-            metamaskProvider = window.ethereum.providers.find(
-                (p) => p.isMetaMask
-            );
-        }
+// export default class MetaMaskWalletProvider extends WalletProvider {
+//     private readonly deeplinkURL = `https://metamask.app.link/dapp/${window.location.href}`;
 
-        if (!metamaskProvider) {
-            if (this.isMobile()) {
-                this.deepLinkToWalletApp();
+//     private getEthereumProvider(): any | undefined {
+//         if (typeof anyWindow.ethereum !== 'undefined' && anyWindow.ethereum?.isMetaMask) {
+//           return anyWindow.ethereum;
+//         }
+    
+//         if (
+//           typeof anyWindow.ethereum !== 'undefined' &&
+//           Array.isArray(anyWindow.ethereum.providers) &&
+//           anyWindow.ethereum.providers.length > 0
+//         ) {
+//           return anyWindow.ethereum.providers.find((p: any) => p.isMetaMask);
+//         }
+    
+//         return undefined;
+//       }
 
-                return;
-            }
-        }
+//     public async getWeb3Provider(): Promise<ethers.providers.Web3Provider | undefined> {
 
-        return new ethers.providers.Web3Provider(metamaskProvider);
-    }
+//         let metamaskProvider: any = this.getEthereumProvider();
 
-    private deepLinkToWalletApp() {
-        window.open(this.deeplinkURL, '_blank');
-    }
-}
+//         if (!metamaskProvider) {
+//             if (this.isMobile()) {
+//                 this.deepLinkToWalletApp();
+//                 return;
+//             }
+//         }
+
+//         return new ethers.providers.Web3Provider(metamaskProvider);
+//     }
+
+//     private deepLinkToWalletApp() {
+//         window.open(this.deeplinkURL, '_blank');
+//     }
+// }

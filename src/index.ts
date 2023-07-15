@@ -1,15 +1,15 @@
 // ABIs
-import BUSD     from "../abis/busd.json" assert { type: "json" };
-import DAI      from "../abis/dai.json" assert { type: "json" };
-import FTBridge from "../abis/FTBridge.json" assert { type: "json" };
-import USDT     from "../abis/usdt.json" assert { type: "json" };
-import WERC20   from "../abis/WrappedERC20.json" assert { type: "json" };
+import BUSD     from "../abis/busd.json" ;
+import DAI      from "../abis/dai.json" ;
+import FTBridge from "../abis/FTBridge.json" ;
+import USDT     from "../abis/usdt.json" ;
+import WERC20   from "../abis/WrappedERC20.json" ;
 
 // DATA
-import MAINNETS from "../data/mainnet.json" assert { type: "json" };
-import TESTNETS from "../data/testnet.json" assert { type: "json" };
-import MAINNET_TOKENS from "../data/mainnetTokens.json" assert { type: "json" };
-import TESTNET_TOKENS from "../data/testnetTokens.json" assert { type: "json" };
+import MAINNETS from "../data/mainnet.json" ;
+import TESTNETS from "../data/testnet.json" ;
+import MAINNET_TOKENS from "../data/mainnetTokens.json" ;
+import TESTNET_TOKENS from "../data/testnetTokens.json" ;
 
 // Logos:Chains
 import{
@@ -56,11 +56,11 @@ import {
 import {TEnvironment} from './enums/environment.js';
 
 // Wallets
-import {
-    //CoinbaseWalletProvider,
-    // MetaMaskWalletProvider,
-    // WalletProvider,
-} from './wallets/index.js'
+// import {
+//     CoinbaseWalletProvider,
+//     MetaMaskWalletProvider,
+//     WalletProvider,
+// } from './wallets/index.js'
 
 
 export {
@@ -107,7 +107,7 @@ export {
     ContractAddress,
     SupportedTokenType,
     // Wallets
-    //CoinbaseWalletProvider,
+    // CoinbaseWalletProvider,
     // MetaMaskWalletProvider,
     // WalletProvider,
 

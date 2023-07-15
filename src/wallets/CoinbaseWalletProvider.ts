@@ -1,17 +1,19 @@
 // import { ethers } from 'ethers';
 // import WalletProvider from './WalletProvider.js';
 
+// const anyWindow: any = (window as any);
+
 // export default class CoinbaseWalletProvider extends WalletProvider {
 //     private readonly deeplinkURL = `https://go.cb-w.com/dapp?cb_url=${window.location.href}`;
 
 //     public async getWeb3Provider() {
-//         let coinbaseProvider: any = window?.ethereum?.isCoinbaseWallet
-//             ? window?.ethereum
+//         let coinbaseProvider: any = anyWindow?.ethereum?.isCoinbaseWallet
+//             ? anyWindow?.ethereum
 //             : undefined;
 
-//         if (window?.ethereum?.providers?.length) {
-//             coinbaseProvider = window.ethereum.providers.find(
-//                 (p) => p.isCoinbaseWallet
+//         if (anyWindow?.ethereum?.providers?.length) {
+//             coinbaseProvider = anyWindow.ethereum.providers.find(
+//                 (p: { isCoinbaseWallet: boolean; }) => p.isCoinbaseWallet
 //             );
 //         }
 

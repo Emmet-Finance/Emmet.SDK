@@ -1,13 +1,14 @@
 {
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "lib": ["es6", "dom", "dom.iterable"],
-        "module": "NodeNext",
-        "moduleResolution": "NodeNext",
+        "esModuleInterop": false,
+        "lib": ["ES6", "dom", "dom.iterable"],
+        "module": "esnext",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
         "removeComments": true,
         "resolveJsonModule": true,
-        "strict": false,
+        "strict": true,
         "target": "ES2021",
         "outDir": "dist"
     },
@@ -21,16 +22,10 @@
         "abis",
         "data"
     ],
-    "hooks": [ "copy-files" ],
     "exclude": [
         "dist",
         "node_modules",
         "src/**/*.txt",
         "tsconfig.json"
-    ],
-    "lib": [
-        "ESNext" /* ESNext includes new Level-4 features that were
-                 recently added to the ECMA-262 JS spec */
-       ],
-
+    ]
 }

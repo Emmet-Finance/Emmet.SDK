@@ -1,6 +1,6 @@
 
-import mainnets from '../../data/mainnet.json' assert { type: "json" };
-import testnets from '../../data/testnet.json' assert { type: "json" };
+import mainnets from '../../data/mainnet.json' ;
+import testnets from '../../data/testnet.json' ;
 import { EVMChainMap } from '../interfaces/chains.js';
 
 export type EVMChain = {
@@ -30,31 +30,33 @@ export type TestnetEVMName = keyof typeof testnets;
 /**
  * An array of EVM Mannet names, Ex.: [ethereum, bsc, ...]
  */
-export const EVMMainnetNames:string[] = Object.keys(mainnets);
+export const EVMMainnetNames:MainnetEVMName[] = Object.keys(mainnets) as MainnetEVMName[];
 /**
  * An array of EVM Testnet names, Ex.: [goerly, tbsc, ...]
  */
-export const EVMTestnetNames:string[] = Object.keys(testnets);
+export const EVMTestnetNames:TestnetEVMName[] = Object.keys(testnets) as TestnetEVMName[];
 
 /**
  * Hashmap: {key:chainName, value:chainId}
  */
-export let MAINNET_CHAIN_IDS = {};
+// @ts-ignore
+export let MAINNET_CHAIN_IDS: {[chainName in MainnetEVMName]: string;} = {};
 
 /**
  * Hashmap: {key:chainName, value:chainId}
  */
-export let TESTNET_CHAIN_IDS ={};
+// @ts-ignore
+export let TESTNET_CHAIN_IDS: {[chainName in TestnetEVMName]: string;} = {};
 
 /**
  * Hashmap: {key:chainId, value:chainName}
  */
-export let MAINNET_CHAIN_ID_TO_NAME = {};
+export let MAINNET_CHAIN_ID_TO_NAME: {[chainId:string]:string} = {};
 
 /**
  * Hashmap: {key:chainId, value:chainName}
  */
-export let TESTNET_CHAIN_ID_TO_NAME ={};
+export let TESTNET_CHAIN_ID_TO_NAME: {[chainId:string]:string} = {};
 
 
 export let EVMMainnets: EVMChainMap = {};
