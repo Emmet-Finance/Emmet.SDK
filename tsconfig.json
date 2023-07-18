@@ -11,22 +11,20 @@
         "noImplicitReturns": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
+        "outDir": "dist",
         "removeComments": true,
         "resolveJsonModule": true,
         "strict": true,
         "target": "ESNext",
         "types": ["node"],
         "typeRoots": ["node_modules/@types", "src/types"],
-        "outDir": "dist"
     },
     "ts-node": {
         "esm": true
     },
     "include": [
         "global.d.ts",
-        "src/**/*.{ts,js,json}", 
-        "abis",
-        "data"
+        "src/**/*",
     ],
     "exclude": [
         "dist",
