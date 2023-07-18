@@ -1,0 +1,63 @@
+export const LOGO_BSC = `<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2496 2496" style="enable-background:new 0 0 2496 2496;" xml:space="preserve">
+<g>
+	<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#F0B90B;" d="M1248,0c689.3,0,1248,558.7,1248,1248s-558.7,1248-1248,1248
+		S0,1937.3,0,1248S558.7,0,1248,0L1248,0z"/>
+	<path style="fill:#FFFFFF;" d="M685.9,1248l0.9,330l280.4,165v193.2l-444.5-260.7v-524L685.9,1248L685.9,1248z M685.9,918v192.3
+		l-163.3-96.6V821.4l163.3-96.6l164.1,96.6L685.9,918L685.9,918z M1084.3,821.4l163.3-96.6l164.1,96.6L1247.6,918L1084.3,821.4
+		L1084.3,821.4z"/>
+	<path style="fill:#FFFFFF;" d="M803.9,1509.6v-193.2l163.3,96.6v192.3L803.9,1509.6L803.9,1509.6z M1084.3,1812.2l163.3,96.6
+		l164.1-96.6v192.3l-164.1,96.6l-163.3-96.6V1812.2L1084.3,1812.2z M1645.9,821.4l163.3-96.6l164.1,96.6v192.3l-164.1,96.6V918
+		L1645.9,821.4L1645.9,821.4L1645.9,821.4z M1809.2,1578l0.9-330l163.3-96.6v524l-444.5,260.7v-193.2L1809.2,1578L1809.2,1578
+		L1809.2,1578z"/>
+	<polygon style="fill:#FFFFFF;" points="1692.1,1509.6 1528.8,1605.3 1528.8,1413 1692.1,1316.4 1692.1,1509.6 	"/>
+	<path style="fill:#FFFFFF;" d="M1692.1,986.4l0.9,193.2l-281.2,165v330.8l-163.3,95.7l-163.3-95.7v-330.8l-281.2-165V986.4
+		L968,889.8l279.5,165.8l281.2-165.8l164.1,96.6H1692.1L1692.1,986.4z M803.9,656.5l443.7-261.6l444.5,261.6l-163.3,96.6
+		l-281.2-165.8L967.2,753.1L803.9,656.5L803.9,656.5z"/>
+</g>
+</svg>`;
+export const LOGO_ETHEREUM = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+viewBox="0 0 784.37 1277.39"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_1421394342400">
+   <g>
+    <polygon fill="#343434" fill-rule="nonzero" points="392.07,0 383.5,29.11 383.5,873.74 392.07,882.29 784.13,650.54 "/>
+    <polygon fill="#8C8C8C" fill-rule="nonzero" points="392.07,0 -0,650.54 392.07,882.29 392.07,472.33 "/>
+    <polygon fill="#3C3C3B" fill-rule="nonzero" points="392.07,956.52 387.24,962.41 387.24,1263.28 392.07,1277.38 784.37,724.89 "/>
+    <polygon fill="#8C8C8C" fill-rule="nonzero" points="392.07,1277.38 392.07,956.52 -0,724.89 "/>
+    <polygon fill="#141414" fill-rule="nonzero" points="392.07,882.29 784.13,650.54 392.07,472.33 "/>
+    <polygon fill="#393939" fill-rule="nonzero" points="0,650.54 392.07,882.29 392.07,472.33 "/>
+   </g>
+  </g>
+ </g>
+</svg>`;
+export const LOGO_FUSE = `<svg width="484" height="483" viewBox="0 0 484 483" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="242.057" cy="241.159" r="241.159" fill="#B4F9BA"/>
+<path d="M184.543 100.393L239.67 68.5582C241.24 67.6525 243.187 67.6525 244.757 68.5582L390.046 152.441C391.616 153.347 392.582 155.022 392.597 156.834L392.793 214.526C392.793 216.353 391.827 218.044 390.242 218.949L335.191 250.739C331.81 252.702 327.568 250.256 327.553 246.347L327.372 194.571C327.372 192.76 326.391 191.084 324.821 190.178L184.543 109.209C181.147 107.247 181.147 102.356 184.543 100.393Z" fill="#010101"/>
+<path d="M148.924 361.714L93.8128 329.894C92.2278 328.989 91.2617 327.313 91.2617 325.487V157.721C91.2617 155.91 92.2278 154.234 93.7977 153.313L143.671 124.286C145.256 123.365 147.204 123.365 148.774 124.286L203.825 156.076C207.206 158.038 207.221 162.914 203.84 164.891L159.098 190.93C157.529 191.836 156.563 193.511 156.563 195.338V357.322C156.563 361.246 152.321 363.692 148.924 361.73V361.714Z" fill="#010101"/>
+<path d="M392.841 261.829V325.47C392.841 327.296 391.875 328.972 390.29 329.878L245.001 413.76C243.431 414.666 241.499 414.666 239.929 413.76L189.859 385.08C188.274 384.174 187.293 382.483 187.293 380.657V317.092C187.293 313.182 191.52 310.737 194.916 312.669L239.839 338.406C241.408 339.312 243.341 339.297 244.91 338.406L385.188 257.407C388.584 255.444 392.826 257.89 392.826 261.814L392.841 261.829Z" fill="#010101"/>
+</svg>`;
+export const LOGO_POLYGON = `<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 38.4 33.5" style="enable-background:new 0 0 38.4 33.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#8247E5;}
+</style>
+<g>
+	<path class="st0" d="M29,10.2c-0.7-0.4-1.6-0.4-2.4,0L21,13.5l-3.8,2.1l-5.5,3.3c-0.7,0.4-1.6,0.4-2.4,0L5,16.3
+		c-0.7-0.4-1.2-1.2-1.2-2.1v-5c0-0.8,0.4-1.6,1.2-2.1l4.3-2.5c0.7-0.4,1.6-0.4,2.4,0L16,7.2c0.7,0.4,1.2,1.2,1.2,2.1v3.3l3.8-2.2V7
+		c0-0.8-0.4-1.6-1.2-2.1l-8-4.7c-0.7-0.4-1.6-0.4-2.4,0L1.2,5C0.4,5.4,0,6.2,0,7v9.4c0,0.8,0.4,1.6,1.2,2.1l8.1,4.7
+		c0.7,0.4,1.6,0.4,2.4,0l5.5-3.2l3.8-2.2l5.5-3.2c0.7-0.4,1.6-0.4,2.4,0l4.3,2.5c0.7,0.4,1.2,1.2,1.2,2.1v5c0,0.8-0.4,1.6-1.2,2.1
+		L29,28.8c-0.7,0.4-1.6,0.4-2.4,0l-4.3-2.5c-0.7-0.4-1.2-1.2-1.2-2.1V21l-3.8,2.2v3.3c0,0.8,0.4,1.6,1.2,2.1l8.1,4.7
+		c0.7,0.4,1.6,0.4,2.4,0l8.1-4.7c0.7-0.4,1.2-1.2,1.2-2.1V17c0-0.8-0.4-1.6-1.2-2.1L29,10.2z"/>
+</g>
+</svg>`;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2hhaW5zLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2xvZ29zL2NoYWlucy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxNQUFNLENBQUMsTUFBTSxRQUFRLEdBQUc7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7T0FtQmpCLENBQUM7QUFFUixNQUFNLENBQUMsTUFBTSxhQUFhLEdBQUc7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7T0FtQnRCLENBQUM7QUFFUixNQUFNLENBQUMsTUFBTSxTQUFTLEdBQUc7Ozs7O09BS2xCLENBQUM7QUFFUixNQUFNLENBQUMsTUFBTSxZQUFZLEdBQUc7Ozs7Ozs7Ozs7Ozs7OztPQWVyQixDQUFDIn0=

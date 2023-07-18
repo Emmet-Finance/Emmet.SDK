@@ -30,7 +30,8 @@
   "homepage": "https://github.com/Emmet-Finance/Emmet.SDK#readme",
   "dependencies": {
     "bignumber.js": "^9.1.1",
-    "ethers": "5.7"
+    "ethers": "5.7",
+    "viem": "^1.3.0"
   },
   "devDependencies": {
     "@types/node": "^20.4.2",
