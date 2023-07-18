@@ -1,4 +1,4 @@
-[
+const USDT = [
     {
         "inputs": [],
         "payable": false,
@@ -457,4 +457,6 @@
         "stateMutability": "view",
         "type": "function"
     }
-]
+];
+
+export default USDT;

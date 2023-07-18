@@ -1,2 +1,3 @@
-export * from './chains.js'
-export * from './tokens.js'
+export * from './chains'
+export * from './tokens'
+export * from './wagmi'

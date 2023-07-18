@@ -1,15 +1,22 @@
 {
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
-        "esModuleInterop": false,
+        "declaration": true,
+        "esModuleInterop": true,
+        "inlineSourceMap": true,
         "lib": ["ES6", "dom", "dom.iterable"],
         "module": "esnext",
         "moduleResolution": "node",
         "noImplicitAny": false,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
         "removeComments": true,
         "resolveJsonModule": true,
         "strict": true,
-        "target": "ES2021",
+        "target": "ESNext",
+        "types": ["node"],
+        "typeRoots": ["node_modules/@types", "src/types"],
         "outDir": "dist"
     },
     "ts-node": {
@@ -17,14 +24,13 @@
     },
     "include": [
         "global.d.ts",
-        "src/**/*",
-        "logos/**/*.svg", 
+        "src/**/*.{ts,js,json}", 
         "abis",
         "data"
     ],
     "exclude": [
         "dist",
-        "node_modules",
+        "node_modules/**",
         "src/**/*.txt",
         "tsconfig.json"
     ]

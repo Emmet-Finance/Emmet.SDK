@@ -1,2 +1,2 @@
-export * from './chains.js'
-export * from './wallet.js'
+export * from './chains'
+export * from './wallet'

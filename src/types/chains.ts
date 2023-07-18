@@ -1,76 +1,92 @@
 
-import mainnets from '../../data/mainnet.json' ;
-import testnets from '../../data/testnet.json' ;
-import { EVMChainMap } from '../interfaces/chains.js';
+import {Chain as wagmiChain} from './wagmi'
+import { ChainIdToNameMap, ChainNameToId, EVMChainMap } from '../interfaces/chains.js';
+import {
+    // Mainnets:
+    bsc,
+    ethereum,
+    fuse,
+    polygon,
+    // Testnets:
+    bscTestnet,
+    goerli,
+    mumbai,
+    sparknet,
+} from '../chains';
 
-export type EVMChain = {
+export type EmmetChain = {
     bridge: string,
-    chainName: string,
-    chainId: string | number,
-    explorer: string,
     logo:string,
-    nativeCurrency: {
-        name: string,
-        symbol: string,
-        decimals: string | number
-    },
-    rpcUrls: string[]
 }
 
-/**
- * Checks for consistency of Mainnet chain names
- */
-export type MainnetEVMName = keyof typeof mainnets;
-/**
- * Checks for consistency of Testnet chain names
- */
-export type TestnetEVMName = keyof typeof testnets;
-
+export type EVMChain = wagmiChain & EmmetChain;
 
 /**
- * An array of EVM Mannet names, Ex.: [ethereum, bsc, ...]
+ * Supported Mainnets
  */
-export const EVMMainnetNames:MainnetEVMName[] = Object.keys(mainnets) as MainnetEVMName[];
-/**
- * An array of EVM Testnet names, Ex.: [goerly, tbsc, ...]
- */
-export const EVMTestnetNames:TestnetEVMName[] = Object.keys(testnets) as TestnetEVMName[];
+export const mainnets: EVMChain[] = [
+    bsc,
+    ethereum,
+    fuse,
+    polygon
+];
 
 /**
- * Hashmap: {key:chainName, value:chainId}
+ * Supported Testnets
  */
-// @ts-ignore
-export let MAINNET_CHAIN_IDS: {[chainName in MainnetEVMName]: string;} = {};
+export const testnets: EVMChain[] = [
+    bscTestnet,
+    goerli,
+    mumbai,
+    sparknet,
+];
 
 /**
  * Hashmap: {key:chainName, value:chainId}
  */
 // @ts-ignore
-export let TESTNET_CHAIN_IDS: {[chainName in TestnetEVMName]: string;} = {};
+export let mainnetChainIds: ChainNameToId = {};
 
 /**
- * Hashmap: {key:chainId, value:chainName}
+ * Hashmap: {key:chainName, value:chainId}
  */
-export let MAINNET_CHAIN_ID_TO_NAME: {[chainId:string]:string} = {};
+// @ts-ignore
+export let testnetChainIds: ChainNameToId = {};
 
 /**
- * Hashmap: {key:chainId, value:chainName}
+ * Hashmap: {id:number, value:chainName}
  */
-export let TESTNET_CHAIN_ID_TO_NAME: {[chainId:string]:string} = {};
+export let mainnetChainIdToName: ChainIdToNameMap = {};
 
+/**
+ * Hashmap: {id:string, value:chainName}
+ */
+export let testnetChainIdToName: ChainIdToNameMap = {};
 
+/**
+ * Hashmap: {chainName:string, value:EVMChain }
+ */
 export let EVMMainnets: EVMChainMap = {};
-EVMMainnetNames.map((chainName:MainnetEVMName) => {
-    // TypeChecked chain params
-    EVMMainnets[chainName] = mainnets[chainName] as EVMChain;
-    MAINNET_CHAIN_IDS[chainName] = mainnets[chainName].chainId;
-    MAINNET_CHAIN_ID_TO_NAME[mainnets[chainName].chainId] = chainName;
-})
 
+/**
+ * Hashmap: {chainName:string, value:EVMChain }
+ */
 export let EVMTestnets: EVMChainMap = {};
-EVMTestnetNames.map((chainName:TestnetEVMName) => {
-    // TypeChecked chain params
-    EVMTestnets[chainName] = testnets[chainName] as EVMChain;
-    TESTNET_CHAIN_IDS[chainName] = testnets[chainName].chainId;
-    TESTNET_CHAIN_ID_TO_NAME[testnets[chainName].chainId] = chainName;
-})
+
+// O(1) access to mainnets
+mainnets.map((net:EVMChain) => {
+
+    EVMMainnets[net.name] = net;
+    mainnetChainIds[net.name] = net.id;
+    mainnetChainIdToName[net.id] = net.name;
+
+});
+
+// O(1) access to testnets
+testnets.map((net:EVMChain) => {
+
+    EVMTestnets[net.name] = net;
+    testnetChainIds[net.name] = net.id;
+    testnetChainIdToName[net.id] = net.name;
+
+});
