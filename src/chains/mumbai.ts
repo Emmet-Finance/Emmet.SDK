@@ -6,7 +6,7 @@ export const mumbai = {
     bridge: '0xb557a0E590B6F6485d0935b644F816E18fDb745d',
     logo: LOGO_POLYGON,
     // Common WAGMI part:
-    id: 80_001,
+    id: 80001,
     name: 'Polygon Mumbai',
     network: 'maticmum',
     nativeCurrency: { name: 'MATIC', symbol: 'MATIC', decimals: 18 },
