@@ -53,6 +53,6 @@ jobs:
     - name: Publish to NPM
       run: |
         cd out/
-        npm publish
+        npm publish dist package.json
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
