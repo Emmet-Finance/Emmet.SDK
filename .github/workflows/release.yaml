@@ -22,9 +22,10 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
 
     - name: Install dependencies
-      run: |
-        yarn
-        yarn build
+      run: yarn
+
+    - name: Build Package
+      run: yarn build
 
     - name: prepare package
       run: |
@@ -35,6 +36,9 @@ jobs:
         mv LICENSE out
         mv docs out
         mv .gitignore out
+
+    - name: List Contents of out folder
+      run: ls -R out
 
     - name: Prepare Production Release
       uses: s0/git-publish-subdir-action@develop
@@ -50,3 +54,4 @@ jobs:
       run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        working-directory: out
