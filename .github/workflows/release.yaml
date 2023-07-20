@@ -43,3 +43,8 @@ jobs:
         FOLDER: out
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         MESSAGE: "Build: ({sha}) {msg}"
+
+    - name: Publish to NPM
+    run: |
+      npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+      npm publish
