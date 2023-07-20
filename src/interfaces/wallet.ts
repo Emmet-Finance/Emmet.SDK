@@ -1,5 +1,3 @@
-import { ethers } from 'ethers';
-
 export interface IConnectedWallet {
     isConnected: boolean;
     address?: string;
@@ -7,11 +5,6 @@ export interface IConnectedWallet {
         value: string;
         formatted: string;
     };
-}
-
-export interface IWalletProvider {
-    getWeb3Provider: () => Promise<ethers.providers.Web3Provider | undefined>;
-    isMobile: () => boolean;
 }
 
 export interface Window {
