@@ -45,6 +45,6 @@ jobs:
         MESSAGE: "Build: ({sha}) {msg}"
 
     - name: Publish to NPM
-    run: |
-      npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
-      npm publish
+      run: |
+        npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+        npm publish
