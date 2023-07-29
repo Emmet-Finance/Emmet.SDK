@@ -7,7 +7,7 @@ export const bscTestnet = {
     logo: LOGO_BSC,
     // Common WAGMI part:
     id: 97, // 0x61
-    name: 'Binance Smart Chain Testnet',
+    name: 'BSC Testnet',
     network: 'bsc-testnet',
     nativeCurrency: {
         decimals: 18,
