@@ -10,6 +10,7 @@ if (window && window.ethereum) {
     ethereum = window.ethereum;
 }
 
+
 /**
  * Checks an EthereumProvider availability
  * @param mustBeMetaMask flag whether isMetamask
@@ -63,6 +64,7 @@ export function detectEthereumProvider<T = EthereumProvider>(
     })
 }
 
+
 /**
  * Extracts EVM accounts from the wallet provider
  * @returns an array of EVM accounts or []
@@ -81,6 +83,7 @@ export async function getEvmAccounts(): Promise<string[]> {
     }
     return [];
 }
+
 
 /**
  * Checks a user native coin balance (ex. ETH, BNB, etc.)
@@ -102,6 +105,7 @@ export async function getEvmBalance(account: string): Promise<string> {
     return "";
 }
 
+
 /**
  * Extracts EVM chainId from the wallet provider
  * @returns an empty string or a hex encoded chainId (ex. 0x12345)
@@ -118,4 +122,20 @@ export async function getEvmChainId(): Promise<string> {
         throw new Error("Failed to get the current chain ID");
     }
     return "";
+}
+
+
+/**
+ * Verifies validity of a potential EVM address
+ * @param address a verified string
+ * @returns `true` | `false`
+ */
+export function isEvmAddress(address: string): boolean {
+    // Regular expression to match the EVM address format
+    // Expected length 42 chars including `0x`
+    // Can only contain hex chars 0-9 | a-f | A-F
+    const evmAddressRegex = /^0x[a-fA-F0-9]{40}$/;
+
+    // Test the address against the regex and return the result
+    return evmAddressRegex.test(address);
 }

@@ -7,7 +7,7 @@ export const mumbai = {
     logo: LOGO_POLYGON,
     // Common WAGMI part:
     id: 80001,
-    name: 'Polygon Mumbai',
+    name: 'Mumbai',
     network: 'maticmum',
     nativeCurrency: { name: 'MATIC', symbol: 'MATIC', decimals: 18 },
     rpcUrls: {

@@ -9,7 +9,7 @@ export const sparknet = {
     id: 123, //0x7b
     name: 'Sparknet',
     network: 'fuse',
-    nativeCurrency: { name: 'Fuse', symbol: 'FUSE', decimals: 18 },
+    nativeCurrency: { name: 'Spark', symbol: 'SPARK', decimals: 18 },
     rpcUrls: {
         default: { http: ['https://rpc.fusespark.io'] },
         public: { http: ['https://rpc.fusespark.io'] },

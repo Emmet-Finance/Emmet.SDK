@@ -3,21 +3,18 @@ import { mainnetTokens, testnetTokens } from '../tokens';
 /**
  * Contract address type
  */
-export type ContractAddress = {
-    address:string,
-    chain:string
-}
+export type ContractAddress = {[key: string]: string}
 
 /**
  * Type defining a supported token structure
  */
 export type SupportedTokenType = {
-    abi:string, // Native contract ABI
+    address: ContractAddress,
+    abi:any, // Native contract ABI
     decimals: number,
     logo: string,
     name: string,
-    native: ContractAddress,
-    wrapped: ContractAddress[]
+    native: string
 }
 
 /**
