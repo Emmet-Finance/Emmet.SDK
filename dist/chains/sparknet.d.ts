@@ -5,8 +5,8 @@ export declare const sparknet: {
     readonly name: "Sparknet";
     readonly network: "fuse";
     readonly nativeCurrency: {
-        readonly name: "Fuse";
-        readonly symbol: "FUSE";
+        readonly name: "Spark";
+        readonly symbol: "SPARK";
         readonly decimals: 18;
     };
     readonly rpcUrls: {
