@@ -1,7 +1,11 @@
 import { EthereumProvider, window } from '../interfaces';
 import EtherConstants, { MESSAGE_TYPE } from '../wallets/EthreumConstants';
 
-const { ethereum } = window;
+let ethereum: EthereumProvider | undefined;
+
+if (window && window.ethereum) {
+    ethereum = window.ethereum;
+}
 
 /**
  * Checks an EthereumProvider availability
@@ -14,7 +18,6 @@ export function detectEthereumProvider<T = EthereumProvider>(
     timeout = 3000
 ): Promise<T | null> {
 
-    const { ethereum } = window;
     let handled = false;
 
     return new Promise(resolve => {
@@ -63,13 +66,13 @@ export function detectEthereumProvider<T = EthereumProvider>(
  */
 export async function getEvmAccounts(): Promise<string[]> {
     try {
+        if (ethereum) {
+            const accounts: string[] = await ethereum?.request<string[]>({
+                method: MESSAGE_TYPE.ETH_REQUEST_ACCOUNTS,
+            }) as string[];
 
-        const accounts: string[] = await ethereum?.request<string[]>({
-            method: MESSAGE_TYPE.ETH_REQUEST_ACCOUNTS,
-        }) as string[];
-
-        if (accounts) return accounts;
-
+            if (accounts) return accounts;
+        }
     } catch (error) {
         throw new Error("Failed to get EVM accounts");
     }
@@ -83,13 +86,13 @@ export async function getEvmAccounts(): Promise<string[]> {
  */
 export async function getEvmBalance(account: string): Promise<string> {
     try {
-
-        const response = await ethereum?.request<string>({
-            method: EtherConstants.ETH_GET_BALANCE,
-            params: [account, "latest"],
-        }) as string;
-        if (response) return response
-
+        if (ethereum) {
+            const response = await ethereum?.request<string>({
+                method: EtherConstants.ETH_GET_BALANCE,
+                params: [account, "latest"],
+            }) as string;
+            if (response) return response
+        }
     } catch (error) {
         throw new Error("Failed to get the native coin balance");
     }
@@ -102,10 +105,12 @@ export async function getEvmBalance(account: string): Promise<string> {
  */
 export async function getEvmChainId(): Promise<string> {
     try {
-        const chainid: string = await ethereum?.request<string>({
-            method: EtherConstants.ETH_CHAIN_ID
-        }) as string;
-        if (chainid) return chainid;
+        if (ethereum) {
+            const chainid: string = await ethereum?.request<string>({
+                method: EtherConstants.ETH_CHAIN_ID
+            }) as string;
+            if (chainid) return chainid;
+        }
     } catch (error) {
         throw new Error("Failed to get the current chain ID");
     }
