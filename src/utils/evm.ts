@@ -1,5 +1,8 @@
-import { EthereumProvider, window } from '../interfaces';
+import { EthereumProvider} from '../interfaces';
 import EtherConstants, { MESSAGE_TYPE } from '../wallets/EthreumConstants';
+
+// Ensure that the 'window' object is available in the browser environment
+const window = typeof globalThis !== 'undefined' ? globalThis.window : null;
 
 let ethereum: EthereumProvider | undefined;
 
@@ -25,7 +28,7 @@ export function detectEthereumProvider<T = EthereumProvider>(
         if (ethereum) {
             handleEthereum();
         } else {
-            window.addEventListener(
+            window?.addEventListener(
                 EtherConstants.ETH_INITIALISED,
                 handleEthereum,
                 { once: true },
@@ -42,7 +45,7 @@ export function detectEthereumProvider<T = EthereumProvider>(
             }
             handled = true;
 
-            window.removeEventListener(EtherConstants.ETH_INITIALISED, handleEthereum);
+            window?.removeEventListener(EtherConstants.ETH_INITIALISED, handleEthereum);
 
             if (ethereum && (!mustBeMetaMask || ethereum.isMetaMask)) {
                 resolve(ethereum as unknown as T)
