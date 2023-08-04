@@ -1,10 +1,16 @@
-import testnet_BUSD from './testnet/busd';
-import testnet_DAI from './testnet/dai';
-import testnet_USDT from './testnet/usdt';
-export const testnetTokens = {
-    BUSD: testnet_BUSD,
-    DAI: testnet_DAI,
-    USDT: testnet_USDT
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-export const mainnetTokens = {};
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvdG9rZW5zL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sWUFBWSxNQUFNLGdCQUFnQixDQUFDO0FBQzFDLE9BQU8sV0FBVyxNQUFNLGVBQWUsQ0FBQztBQUN4QyxPQUFPLFlBQVksTUFBTSxnQkFBZ0IsQ0FBQztBQUsxQyxNQUFNLENBQUMsTUFBTSxhQUFhLEdBQUc7SUFDekIsSUFBSSxFQUFFLFlBQVk7SUFDbEIsR0FBRyxFQUFFLFdBQVc7SUFDaEIsSUFBSSxFQUFFLFlBQVk7Q0FDckIsQ0FBQTtBQUtELE1BQU0sQ0FBQyxNQUFNLGFBQWEsR0FBRyxFQUU1QixDQUFBIn0=
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.mainnetTokens = exports.testnetTokens = void 0;
+const busd_1 = __importDefault(require("./testnet/busd"));
+const dai_1 = __importDefault(require("./testnet/dai"));
+const usdt_1 = __importDefault(require("./testnet/usdt"));
+exports.testnetTokens = {
+    BUSD: busd_1.default,
+    DAI: dai_1.default,
+    USDT: usdt_1.default
+};
+exports.mainnetTokens = {};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvdG9rZW5zL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBLDBEQUEwQztBQUMxQyx3REFBd0M7QUFDeEMsMERBQTBDO0FBSzdCLFFBQUEsYUFBYSxHQUFHO0lBQ3pCLElBQUksRUFBRSxjQUFZO0lBQ2xCLEdBQUcsRUFBRSxhQUFXO0lBQ2hCLElBQUksRUFBRSxjQUFZO0NBQ3JCLENBQUE7QUFLWSxRQUFBLGFBQWEsR0FBRyxFQUU1QixDQUFBIn0=
