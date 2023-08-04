@@ -8,3 +8,4 @@ export * from './logos/wallets';
 export * from './utils';
 export * from './tokens';
 export * from './types';
+export * from './wallets';
