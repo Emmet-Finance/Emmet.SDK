@@ -5,7 +5,7 @@ import { ContractAddress, SupportedTokenType } from '../../types';
 const DAI: SupportedTokenType = {
     address: {
         // Native
-        goerly:"0x3fcc5C26fAd6B8fC9461E1d6f920A3C96F15f40a",
+        goerli:"0x3fcc5C26fAd6B8fC9461E1d6f920A3C96F15f40a",
         // Wrapped
         bsctestnet:"0x2AEaD32687aB9D18bb63248f94cD0ADA3ce45ce0",
         mumbai:"0xD55C04E15B9808bf3e561367D12f3B2dfAA55d48",

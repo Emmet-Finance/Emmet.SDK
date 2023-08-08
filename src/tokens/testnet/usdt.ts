@@ -5,7 +5,7 @@ import { ContractAddress, SupportedTokenType } from '../../types';
 const USDT: SupportedTokenType = {
     address: {
         // Native
-        goerly:"0x291E558C60FB567087D9b87bd62b84Af67b9a376",
+        goerli:"0x291E558C60FB567087D9b87bd62b84Af67b9a376",
         // Wrapped
         bsctestnet:"0x65329f02eb198478E18212253B186D9e1AFA04f9",
         mumbai:"0xB44e023C1ec38ee5E4205A3AA07671aF9cF3Cb01",

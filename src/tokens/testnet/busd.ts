@@ -5,7 +5,7 @@ import { SupportedTokenType, ContractAddress } from '../../types';
 const BUSD: SupportedTokenType = {
     address: {
         // Native
-        goerly:"0x2991E99Df3EDD3F15962294A28b0aD1F4d56E07a",
+        goerli:"0x2991E99Df3EDD3F15962294A28b0aD1F4d56E07a",
         // Wrapped
         bsctestnet:"0xeB7A36D0B2700851c370283c83f31CfC670bF933",
         mumbai:"0xCbD10d57EE3bc0088B3db30777E8b415C95f3747",
