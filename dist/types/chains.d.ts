@@ -1,5 +1,9 @@
 import { Chain as wagmiChain } from './wagmi';
 import { ChainIdToNameMap, ChainNameToId, EVMChainMap } from '../interfaces/chains.js';
+import { MAINNETS, TESTNETS } from '../chains';
+export type TMainnetChainNames = keyof typeof MAINNETS;
+export type TTestnetChainNames = keyof typeof TESTNETS;
+export type TChainName = TMainnetChainNames | TTestnetChainNames;
 export type EmmetChain = {
     bridge: string;
     logo: string;

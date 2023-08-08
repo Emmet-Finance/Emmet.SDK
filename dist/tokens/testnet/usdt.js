@@ -7,7 +7,7 @@ const usdt_1 = __importDefault(require("../../abi/usdt"));
 const tokens_1 = require("../../logos/tokens");
 const USDT = {
     address: {
-        goerly: "0x291E558C60FB567087D9b87bd62b84Af67b9a376",
+        goerli: "0x291E558C60FB567087D9b87bd62b84Af67b9a376",
         bsctestnet: "0x65329f02eb198478E18212253B186D9e1AFA04f9",
         mumbai: "0xB44e023C1ec38ee5E4205A3AA07671aF9cF3Cb01",
         sparknet: "0x59805ca29E5217b4Ce8cb48e57F9C7EcF0D5604F",
