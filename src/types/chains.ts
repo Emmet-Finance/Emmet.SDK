@@ -2,17 +2,30 @@
 import {Chain as wagmiChain} from './wagmi'
 import { ChainIdToNameMap, ChainNameToId, EVMChainMap } from '../interfaces/chains.js';
 import {
-    // Mainnets:
+    MAINNETS,
     bsc,
     ethereum,
     fuse,
     polygon,
-    // Testnets:
+    
+    TESTNETS,
     bscTestnet,
     goerli,
     mumbai,
     sparknet,
 } from '../chains';
+
+/**
+ * Type restricting chain names
+ */
+export type TMainnetChainNames = keyof typeof MAINNETS;
+
+/**
+ * Type restricting chain names
+ */
+export type TTestnetChainNames = keyof typeof TESTNETS;
+
+export type TChainName = TMainnetChainNames | TTestnetChainNames;
 
 export type EmmetChain = {
     bridge: string,
