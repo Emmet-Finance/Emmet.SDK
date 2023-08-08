@@ -36,3 +36,20 @@ export type TTestnetTokenNames = keyof typeof testnetTokens;
  * Array of testnet token names
  */
 export const TestnetTokenNames: TTestnetTokenNames[] = Object.keys(testnetTokens) as TTestnetTokenNames[]
+
+/**
+ * Union type combining all the supported names
+ */
+export type TSupportedTokenNames = TMainnetTokenNames | TTestnetTokenNames;
+
+/**
+ * An array of all supported tokens
+ */
+export const SupportedTokenNames: TSupportedTokenNames[] = MainnetTokenNames && TestnetTokenNames ;
+
+/**
+ * Hashmap {TOKEN_NAME: amount as string}
+ */
+export type TokenNameToAmount = {
+    [key in TSupportedTokenNames]: string;
+};
