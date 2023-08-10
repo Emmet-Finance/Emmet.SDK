@@ -1,7 +1,7 @@
 import { EVMChain } from '../types';
 import { LOGO_BSC } from '../logos/chains';
 
-export const bsc = {
+export const bsc: EVMChain = {
     // Emmet.Bridge part:
     bridge: '',
     logo: LOGO_BSC,
@@ -40,4 +40,4 @@ export const bsc = {
         },
     },
     testnet: false
-} as const satisfies EVMChain;
+} as const;

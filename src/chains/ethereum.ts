@@ -1,7 +1,7 @@
 import { EVMChain } from '../types';
 import {LOGO_ETHEREUM} from '../logos/chains';
 
-export const ethereum = {
+export const ethereum: EVMChain = {
     // Emmet.Bridge part:
     bridge: '',
     logo: LOGO_ETHEREUM,
@@ -55,4 +55,4 @@ export const ethereum = {
         },
     },
     testnet: false
-} as const satisfies EVMChain;
+} as const;

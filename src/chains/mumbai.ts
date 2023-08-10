@@ -1,7 +1,7 @@
 import { EVMChain } from '../types';
 import { LOGO_POLYGON } from '../logos/chains';
 
-export const mumbai = {
+export const mumbai: EVMChain = {
     // Emmet.Bridge part:
     bridge: '0xb557a0E590B6F6485d0935b644F816E18fDb745d',
     logo: LOGO_POLYGON,
@@ -50,4 +50,4 @@ export const mumbai = {
         },
     },
     testnet: true,
-} as const satisfies EVMChain;
+} as const;

@@ -1,7 +1,7 @@
 import { EVMChain } from '../types';
 import { LOGO_ETHEREUM } from '../logos/chains';
 
-export const goerli = {
+export const goerli: EVMChain = {
     // Emmet.Bridge part:
     bridge: '0x52c5cF8d571b1c8cBF75b5f1bD088C1Dd4598bC7',
     logo: LOGO_ETHEREUM,
@@ -55,4 +55,4 @@ export const goerli = {
         },
     },
     testnet: true,
-} as const satisfies EVMChain;
+} as const;

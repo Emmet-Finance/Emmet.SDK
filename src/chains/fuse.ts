@@ -1,7 +1,7 @@
 import { EVMChain } from '../types';
 import { LOGO_FUSE } from '../logos/chains';
 
-export const fuse = {
+export const fuse: EVMChain = {
     // Emmet.Bridge part:
     bridge: '',
     logo: LOGO_FUSE,
@@ -25,4 +25,4 @@ export const fuse = {
         default: { name: 'Fuse Explorer', url: 'https://explorer.fuse.io' },
     },
     testnet: false
-} as const satisfies EVMChain
+} as const;

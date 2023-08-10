@@ -1,7 +1,7 @@
 import { EVMChain } from '../types';
 import {LOGO_FUSE} from '../logos/chains';
 
-export const sparknet = {
+export const sparknet: EVMChain = {
     // Emmet.Bridge part:
     bridge: '0xf2851831674d1630f49a9c000A34d5A8E167577C',
     logo: LOGO_FUSE,
@@ -18,4 +18,4 @@ export const sparknet = {
         default: { name: 'Sparknet Explorer', url: 'https://explorer.fusespark.io/' },
     },
     testnet:true
-} as const satisfies EVMChain
+} as const;
