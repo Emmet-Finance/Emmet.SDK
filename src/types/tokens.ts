@@ -53,3 +53,5 @@ export const SupportedTokenNames: TSupportedTokenNames[] = MainnetTokenNames && 
 export type TokenNameToAmount = {
     [key in TSupportedTokenNames]: string;
 };
+
+export type TokenBalanceObject = { [key: string]: string };
