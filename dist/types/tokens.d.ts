@@ -19,3 +19,6 @@ export declare const SupportedTokenNames: TSupportedTokenNames[];
 export type TokenNameToAmount = {
     [key in TSupportedTokenNames]: string;
 };
+export type TokenBalanceObject = {
+    [key: string]: string;
+};
