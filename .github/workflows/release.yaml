@@ -34,7 +34,6 @@ jobs:
         mv dist out
         mv README.md out
         mv LICENSE out
-        mv docs out
         mv .gitignore out
 
     - name: List Contents of out folder
@@ -52,9 +51,7 @@ jobs:
 
     - name: Publish to NPM
       run: |
-        cd out/
-        cp package.json ./dist/package.json
-        cp README.md ./dist/README.md
+        cd out/dist
         npm publish ./dist
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
