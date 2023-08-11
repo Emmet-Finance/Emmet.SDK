@@ -52,8 +52,10 @@ jobs:
     - name: Publish to NPM
       run: |
         cd out/
-        cp package.json ./dist/dist/package.json
-        cp README.md ./dist/dist/README.md
-        npm publish ./dist
+        mkdir publish
+        cp package.json ./publish/package.json
+        cp README.md ./publish/README.md
+        cp ./dist ./publish/dist
+        npm publish ./publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
