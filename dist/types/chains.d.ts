@@ -17,3 +17,5 @@ export declare let mainnetChainIdToName: ChainIdToNameMap;
 export declare let testnetChainIdToName: ChainIdToNameMap;
 export declare let EVMMainnets: EVMChainMap;
 export declare let EVMTestnets: EVMChainMap;
+export declare const ChainIdToName: ChainIdToNameMap;
+export declare const AllChainNamesToId: ChainNameToId;
