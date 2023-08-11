@@ -103,3 +103,13 @@ testnets.map((net:EVMChain) => {
     testnetChainIdToName[net.id] = net.name;
 
 });
+
+/**
+ * A combination of mainnet & testnet mappings: chainId => name
+ */
+export const ChainIdToName: ChainIdToNameMap =  mainnetChainIdToName && testnetChainIdToName;
+
+/**
+ * A combination of mainnet & testnet mappings: name => chainId
+ */
+export const AllChainNamesToId: ChainNameToId = mainnetChainIds && testnetChainIds;
