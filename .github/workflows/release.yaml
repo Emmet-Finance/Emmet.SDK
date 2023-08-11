@@ -55,7 +55,7 @@ jobs:
         mkdir publish
         cp package.json ./publish/package.json
         cp README.md ./publish/README.md
-        cp ./dist ./publish/dist
+        cp ./dist ./publish/dist -r
         npm publish ./publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
