@@ -1,2 +1,2 @@
 "use strict";
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQ29pbmJhc2VXYWxsZXRQcm92aWRlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy93YWxsZXRzL0NvaW5iYXNlV2FsbGV0UHJvdmlkZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiJ9
+//# sourceMappingURL=CoinbaseWalletProvider.js.map

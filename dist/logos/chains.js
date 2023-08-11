@@ -32,4 +32,4 @@ exports.LOGO_POLYGON = `<svg width="20" height="20" viewBox="0 0 20 20" fill="no
 	</clipPath>
 </defs>
 </svg>`;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2hhaW5zLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3JjL2xvZ29zL2NoYWlucy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFBYSxRQUFBLFFBQVEsR0FBRzs7O09BR2pCLENBQUM7QUFFSyxRQUFBLGFBQWEsR0FBRzs7Ozs7T0FLdEIsQ0FBQztBQUVLLFFBQUEsU0FBUyxHQUFHOzs7OztPQUtsQixDQUFDO0FBRUssUUFBQSxZQUFZLEdBQUc7Ozs7Ozs7Ozs7Ozs7O09BY3JCLENBQUMifQ==
+//# sourceMappingURL=chains.js.map

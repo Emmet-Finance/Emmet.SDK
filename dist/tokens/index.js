@@ -13,4 +13,4 @@ exports.testnetTokens = {
     USDT: usdt_1.default
 };
 exports.mainnetTokens = {};
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvdG9rZW5zL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBLDBEQUEwQztBQUMxQyx3REFBd0M7QUFDeEMsMERBQTBDO0FBSzdCLFFBQUEsYUFBYSxHQUFHO0lBQ3pCLElBQUksRUFBRSxjQUFZO0lBQ2xCLEdBQUcsRUFBRSxhQUFXO0lBQ2hCLElBQUksRUFBRSxjQUFZO0NBQ3JCLENBQUE7QUFLWSxRQUFBLGFBQWEsR0FBRyxFQUU1QixDQUFBIn0=
+//# sourceMappingURL=index.js.map
