@@ -138,7 +138,7 @@ export const mainnetChainIndexToName: { [key: number]: string } = {
  * O(1) conversion of testnet chain name to its internal bridge index
  */
 export const testnetChainNameToIndex: { [key: string]: number } = {
-    'Goerly': 1,
+    'Goerli': 1,
     'BSC Testnet': 2,
     'Mumbai': 3,
     'Sparknet': 4
@@ -148,7 +148,7 @@ export const testnetChainNameToIndex: { [key: string]: number } = {
  * O(1) conversion of testnet chain's internal bridge index to its name
  */
 export const testnetChainIndexToName: { [key: number]: string } = {
-    1: 'Goerly',
+    1: 'Goerli',
     2: 'BSC Testnet',
     3: 'Mumbai',
     4: 'Sparknet'
