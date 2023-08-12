@@ -115,7 +115,7 @@ export const ChainIdToName: ChainIdToNameMap =  mainnetChainIdToName && testnetC
 export const AllChainNamesToId: ChainNameToId = mainnetChainIds && testnetChainIds;
 
 /**
- * O(1) conversion of chain name to its internal bridge index
+ * O(1) conversion of a mainnet chain's name to its internal bridge index
  */
 export const mainnetChainNameToIndex: { [key: string]: number } = {
     'Ethereum': 1,
@@ -125,9 +125,9 @@ export const mainnetChainNameToIndex: { [key: string]: number } = {
 };
 
 /**
- * O(1) conversion of a chain's internal bridge index to its name
+ * O(1) conversion of a mainnet chain's internal bridge index to its name
  */
-export const mainnetChainNumberToName: { [key: number]: string } = {
+export const mainnetChainIndexToName: { [key: number]: string } = {
     1: 'Ethereum',
     2: 'BSC',
     3: 'Polygon',
@@ -135,7 +135,7 @@ export const mainnetChainNumberToName: { [key: number]: string } = {
 };
 
 /**
- * O(1) conversion of chain name to its internal bridge index
+ * O(1) conversion of testnet chain name to its internal bridge index
  */
 export const testnetChainNameToIndex: { [key: string]: number } = {
     'Goerly': 1,
@@ -145,11 +145,21 @@ export const testnetChainNameToIndex: { [key: string]: number } = {
 };
 
 /**
- * O(1) conversion of a chain's internal bridge index to its name
+ * O(1) conversion of testnet chain's internal bridge index to its name
  */
-export const testnetChainNumberToName: { [key: number]: string } = {
+export const testnetChainIndexToName: { [key: number]: string } = {
     1: 'Goerly',
     2: 'BSC Testnet',
     3: 'Mumbai',
     4: 'Sparknet'
 };
+
+/**
+ * O(1) conversion of any chain name to its internal bridge index
+ */
+export const allChainNameToIndex = mainnetChainNameToIndex && testnetChainNameToIndex;
+
+/**
+ * O(1) conversion of any chain's internal bridge index to its name
+ */
+export const allChainIndexToName = mainnetChainIndexToName && testnetChainIndexToName;
