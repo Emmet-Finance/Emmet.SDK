@@ -2,7 +2,9 @@ import {
     getContract as getViemContract,
     createPublicClient,
     custom,
+    encodePacked,
     http,
+    keccak256,
     PublicClient,
 } from 'viem';
 import { isEvmAddress } from './evm';
@@ -21,7 +23,77 @@ import FTBridge from '../abi/FTBridge';
 
 
 /**
- * Estimates local TX fee
+ * Retrieves the destination chain fee estimation in `wei`
+ * @param amount number of tokens planned for transfer
+ * @param senderAddress the address of the owner & sender of the tokens
+ * @param destinationAddress the address of the token receiver
+ * @param fromChainName the chain of origin
+ * @param toChainName the chain of destination
+ * @param tokenSymbol the 4-6 short identifier of the token
+ * @returns bigint | undefined
+ */
+export async function estimateReceive(
+    amount: string | bigint,
+    senderAddress:string,
+    destinationAddress: string,
+    fromChainName: TChainName,
+    toChainName: string,
+    tokenSymbol: string
+): Promise<bigint | undefined> {
+
+    try {
+
+        const selectedChain = testnets.filter(net =>
+            net.name === fromChainName)[0];
+
+        const publicClient = getPublicClient(senderAddress, fromChainName, [selectedChain], true);
+
+        const nativeChainId: number = allChainNameToIndex[fromChainName];
+        const toChainId: number = allChainNameToIndex[toChainName];
+
+        // For estimation we use the MAX uint256
+        const actionId:bigint = 2n**256n-1n;
+
+        const txHash = keccak256(encodePacked(
+            ['uint16', 'string', 'uint16', 'string', 'uint256'],
+            [
+                nativeChainId,
+                "-",
+                toChainId,
+                "-",
+                actionId
+            ]
+        ));
+
+        const chainId = allChainNameToIndex[toChainName];
+
+        const populatedArgs: [bigint, number, string, string] = [
+
+                BigInt(amount),
+                chainId,
+                tokenSymbol,
+                destinationAddress
+            ];
+
+        const estimation = await publicClient?.estimateContractGas({
+            address: `0x${selectedChain.bridge.slice(2)}`,
+            abi: FTBridge,
+            functionName: 'receiveInstallment',
+            args: [txHash, populatedArgs],
+            account: `0x${senderAddress.slice(2)}`
+        });
+
+        return estimation;
+
+
+    } catch (error) {
+        console.error("estimateReceive Error:", error);
+    }
+    return Promise.reject(undefined);
+}
+
+/**
+ * Estimates local TX fee in `wei`
  * @param amount number of tokens planned for transfer
  * @param account the address of the owner & sender of the tokens
  * @param fromChainName the name of the departure chain
