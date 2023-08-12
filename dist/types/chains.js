@@ -45,13 +45,13 @@ exports.mainnetChainIndexToName = {
     4: 'Fuse'
 };
 exports.testnetChainNameToIndex = {
-    'Goerly': 1,
+    'Goerli': 1,
     'BSC Testnet': 2,
     'Mumbai': 3,
     'Sparknet': 4
 };
 exports.testnetChainIndexToName = {
-    1: 'Goerly',
+    1: 'Goerli',
     2: 'BSC Testnet',
     3: 'Mumbai',
     4: 'Sparknet'
