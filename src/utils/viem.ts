@@ -30,7 +30,7 @@ import FTBridge from '../abi/FTBridge';
  * @param fromChainName the chain of origin
  * @param toChainName the chain of destination
  * @param tokenSymbol the 4-6 short identifier of the token
- * @returns bigint | undefined
+ * @returns bigint | 22880n
  */
 export async function estimateReceive(
     amount: string | bigint,
@@ -39,7 +39,7 @@ export async function estimateReceive(
     fromChainName: TChainName,
     toChainName: string,
     tokenSymbol: string
-): Promise<bigint | undefined> {
+): Promise<bigint> {
 
     try {
 
@@ -81,15 +81,16 @@ export async function estimateReceive(
             functionName: 'receiveInstallment',
             args: [txHash, populatedArgs],
             account: `0x${senderAddress.slice(2)}`
-        });
+        }) as bigint;
 
-        return estimation;
+        const gasPrice = await publicClient!.getGasPrice();
 
+        return estimation * gasPrice;
 
     } catch (error) {
         console.error("estimateReceive Error:", error);
     }
-    return Promise.reject(undefined);
+    return 22880n * 20n;
 }
 
 /**
@@ -99,7 +100,7 @@ export async function estimateReceive(
  * @param fromChainName the name of the departure chain
  * @param toChainName the name of the destination chain
  * @param tokenName the uppercased token name (symbol)
- * @returns a bigint | undefined
+ * @returns a bigint | 83889n
  */
 export async function estimateSend(
     amount:string|bigint,
@@ -107,7 +108,7 @@ export async function estimateSend(
     fromChainName: TChainName,
     toChainName: string,
     tokenName: string
-): Promise<bigint | undefined> {
+): Promise<bigint> {
 
     try {
 
@@ -131,14 +132,16 @@ export async function estimateSend(
             functionName: 'sendInstallment',
             args: [populatedArgs],
             account: `0x${account.slice(2)}`
-        });
+        }) as bigint;
 
-        return estimation;
+        const gasPrice = await publicClient!.getGasPrice();
+
+        return estimation * gasPrice;
 
     } catch (error) {
         console.error("estimateSend Error:", error)
     }
-    return undefined;
+    return 83889n * 20n;
 
 }
 
