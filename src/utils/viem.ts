@@ -1,6 +1,7 @@
 import {
     getContract as getViemContract,
     createPublicClient,
+    createWalletClient,
     custom,
     encodePacked,
     http,
@@ -8,18 +9,105 @@ import {
     PublicClient,
 } from 'viem';
 import { isEvmAddress } from './evm';
-import { 
-    EVMChain,
-    TChainName, 
-    TTestnetTokenNames, 
-    TestnetTokenNames, 
-    TokenBalanceObject, 
+import {
     allChainNameToIndex,
-    testnets 
+    EVMChain,
+    SupportedTokenType,
+    TChainName,
+    testnets,
+    TTestnetTokenNames,
+    TestnetTokenNames,
+    TokenBalanceObject,
 } from '../types';
 import { testnetTokens } from '../tokens';
-import { TESTNETS } from '../chains';
+import { ALL_CHAINS } from '../chains';
 import FTBridge from '../abi/FTBridge';
+
+
+/**
+ * @dev Approves the bridge to spend the `amount` of ERC20
+ * @param chainName the chain name where to approve
+ * @param tokenName the token symbol
+ * @param amount the token quantity x decimals
+ * @returns the hash of the transaction
+ */
+export async function approveERC20(
+    chainName: TChainName,
+    tokenName: string,
+    amount: string,
+) {
+
+    const {
+        account,
+        chain,
+        publicClient,
+        signer
+    } = await config(chainName);
+
+    const tokenContract: SupportedTokenType = testnetTokens[
+        tokenName
+            .toLocaleUpperCase() as keyof typeof testnetTokens
+    ];
+
+    const args: [string, string] = [
+        chain.bridge,
+        amount
+    ];
+
+    const tokenContractAddress: string = tokenContract.address[
+        chainName
+            .toLocaleLowerCase()
+            .replace(/[^a-z]/g, '') // remove spaces, etc.
+    ];
+
+    const { request } = await publicClient.simulateContract({
+        address: `0x${tokenContractAddress.slice(2)}`,
+        abi: tokenContract.abi,
+        functionName: 'approve',
+        args,
+        account,
+        chain,
+    });
+
+    return await signer.writeContract(request);
+
+}
+
+
+/**
+ * Setup boilerplate
+ * @param chainName TChainName (includes mainnet & testnet names)
+ * @returns \{ account, chain, publicClient, signer \}
+ */
+export async function config(chainName: TChainName) {
+
+    const chain = ALL_CHAINS[
+        chainName
+            .toLocaleLowerCase()
+            .replace(/[^a-zA-Z]/g, '') as keyof typeof ALL_CHAINS
+    ];
+
+    const publicClient = createPublicClient({
+        chain,
+        transport: http(chain.rpcUrls.default.http[0])
+    });
+
+    const signer = createWalletClient({
+        chain,
+        transport: custom(window?.ethereum!)
+    });
+
+    // JSON-RPC Account
+    const [account] = await signer.getAddresses();
+
+    return {
+        account,
+        chain,
+        publicClient,
+        signer
+    }
+
+}
 
 
 /**
@@ -34,7 +122,7 @@ import FTBridge from '../abi/FTBridge';
  */
 export async function estimateReceive(
     amount: string | bigint,
-    senderAddress:string,
+    senderAddress: string,
     destinationAddress: string,
     fromChainName: TChainName,
     toChainName: string,
@@ -52,7 +140,7 @@ export async function estimateReceive(
         const toChainId: number = allChainNameToIndex[toChainName];
 
         // For estimation we use the MAX uint256
-        const actionId:bigint = 2n**256n-1n;
+        const actionId: bigint = 2n ** 256n - 1n;
 
         const txHash = keccak256(encodePacked(
             ['uint16', 'string', 'uint16', 'string', 'uint256'],
@@ -69,11 +157,11 @@ export async function estimateReceive(
 
         const populatedArgs: [bigint, number, string, string] = [
 
-                BigInt(amount),
-                chainId,
-                tokenSymbol,
-                destinationAddress
-            ];
+            BigInt(amount),
+            chainId,
+            tokenSymbol,
+            destinationAddress
+        ];
 
         const estimation = await publicClient?.estimateContractGas({
             address: `0x${selectedChain.bridge.slice(2)}`,
@@ -103,7 +191,7 @@ export async function estimateReceive(
  * @returns a bigint | 83889n
  */
 export async function estimateSend(
-    amount:string|bigint,
+    amount: string | bigint,
     account: string,
     fromChainName: TChainName,
     toChainName: string,
@@ -195,11 +283,11 @@ export async function getEvmTokenAllowances(
                     publicClient,
                 );
 
-                const testnet = TESTNETS[chainName.toLowerCase().replace(/[^a-zA-Z]/g, '') as keyof typeof TESTNETS];
+                const chain = ALL_CHAINS[chainName.toLowerCase().replace(/[^a-zA-Z]/g, '') as keyof typeof ALL_CHAINS];
 
                 allowances[tokenName] = (await contract.read.allowance([
                     account,
-                    testnet.bridge.toString()
+                    chain.bridge.toString()
                 ])).toString();
             }
 
