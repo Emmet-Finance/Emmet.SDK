@@ -134,6 +134,13 @@ export const mainnetChainIndexToName: { [key: number]: string } = {
     4: 'Fuse'
 };
 
+export const BridgeChainIds = {
+    goerly: 1,
+    bsctestnet: 2,
+    mumbai:3,
+    sparknet:4
+}
+
 /**
  * O(1) conversion of testnet chain name to its internal bridge index
  */

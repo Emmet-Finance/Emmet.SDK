@@ -15,7 +15,7 @@ export const sparknet: EVMChain = {
         public: { http: ['https://rpc.fusespark.io'] },
     },
     blockExplorers: {
-        default: { name: 'Sparknet Explorer', url: 'https://explorer.fusespark.io/' },
+        default: { name: 'Sparknet Explorer', url: 'https://explorer.fusespark.io' },
     },
     testnet:true
 } as const;
