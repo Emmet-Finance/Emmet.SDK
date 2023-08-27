@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.allChainIndexToName = exports.allChainNameToIndex = exports.testnetChainIndexToName = exports.testnetChainNameToIndex = exports.mainnetChainIndexToName = exports.mainnetChainNameToIndex = exports.AllChainNamesToId = exports.ChainIdToName = exports.EVMTestnets = exports.EVMMainnets = exports.testnetChainIdToName = exports.mainnetChainIdToName = exports.testnetChainIds = exports.mainnetChainIds = exports.testnets = exports.mainnets = void 0;
+exports.allChainIndexToName = exports.allChainNameToIndex = exports.testnetChainIndexToName = exports.testnetChainNameToIndex = exports.BridgeChainIds = exports.mainnetChainIndexToName = exports.mainnetChainNameToIndex = exports.AllChainNamesToId = exports.ChainIdToName = exports.EVMTestnets = exports.EVMMainnets = exports.testnetChainIdToName = exports.mainnetChainIdToName = exports.testnetChainIds = exports.mainnetChainIds = exports.testnets = exports.mainnets = void 0;
 const chains_1 = require("../chains");
 exports.mainnets = [
     chains_1.bsc,
@@ -43,6 +43,12 @@ exports.mainnetChainIndexToName = {
     2: 'BSC',
     3: 'Polygon',
     4: 'Fuse'
+};
+exports.BridgeChainIds = {
+    goerly: 1,
+    bsctestnet: 2,
+    mumbai: 3,
+    sparknet: 4
 };
 exports.testnetChainNameToIndex = {
     'Goerli': 1,

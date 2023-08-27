@@ -14,7 +14,7 @@ exports.bscTestnet = {
         symbol: 'tBNB',
     },
     rpcUrls: {
-        default: { http: ['https://bsc-testnet.publicnode.com'] },
+        default: { http: ['https://data-seed-prebsc-2-s1.bnbchain.org:8545'] },
         public: {
             http: [
                 "https://bsc-testnet.publicnode.com",

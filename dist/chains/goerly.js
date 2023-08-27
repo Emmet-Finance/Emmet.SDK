@@ -19,7 +19,7 @@ exports.goerli = {
             webSocket: ['wss://goerli.infura.io/ws/v3'],
         },
         default: {
-            http: ['https://rpc.ankr.com/eth_goerli'],
+            http: ['https://gateway.tenderly.co/public/goerli'],
         },
         public: {
             http: [
