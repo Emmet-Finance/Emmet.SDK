@@ -18,6 +18,7 @@ import {
     TTestnetTokenNames,
     TestnetTokenNames,
     TokenBalanceObject,
+    BridgeChainIds,
 } from '../types';
 import { testnetTokens } from '../tokens';
 import { ALL_CHAINS } from '../chains';
@@ -361,4 +362,119 @@ export function getPublicClient(
         });
     }
     return undefined;
+}
+
+
+/**
+ * Calls the sendInstallment function of the bridge contract
+ * @param fromChain the name of the chain of departure
+ * @param toChainName the name of the chain of destination
+ * @param tokenName the token symbol
+ * @param amount the token quantity x decimals
+ * @param receiver the beneficiary address
+ * @returns the transaction hash
+ */
+export async function transferERC20(
+    fromChain: TChainName,
+    toChainName: TChainName,
+    tokenName: string,
+    amount: string,
+    receiver: string
+): Promise<string> {
+
+    const {
+        // account,
+        chain,
+        publicClient,
+        signer
+    } = await config(fromChain);
+
+    const chainId: number = BridgeChainIds[
+        toChainName
+            .toLocaleLowerCase()
+            .replace(/[^a-z]/g, '') as keyof typeof BridgeChainIds]
+
+    const bridgeAddress: string = chain.bridge;
+
+    const args: [[bigint, number, string, string]] = [[
+        BigInt(amount),
+        chainId,
+        tokenName.toUpperCase(),
+        receiver
+    ]];
+
+    const { request } = await publicClient.simulateContract({
+        address: `0x${bridgeAddress.slice(2)}`,
+        abi: FTBridge,
+        functionName: 'sendInstallment',
+        args,
+        // account,
+        chain,
+    });
+
+    return await signer.writeContract(request);
+
+}
+
+
+/**
+ * Fetches the transaction from a chain
+ * @param chainName where the TX took place
+ * @param hash the TX hash
+ * @returns JSONified Transaction Receipt
+ */
+export async function getTransaction(
+    chainName: TChainName,
+    hash: `0x${string}`
+) {
+    const { publicClient } = await config(chainName);
+
+    return await publicClient.waitForTransactionReceipt({ hash })
+}
+
+
+/**
+ * Finds one chain by name
+ * @param chains a hashmap of supported chains
+ * @param chainName the selected one
+ * @returns only the selected chain
+ */
+export function findChain<T>(
+    chains: { [key in keyof T]: EVMChain },
+    chainName: string
+): EVMChain {
+    if (chains && chainName) {
+        const cleanName = chainName
+            .toLowerCase()
+            .replace(/[^a-z]/g, '')
+        return chains[cleanName as keyof T]
+    }
+    const keys = Object.keys(chains);
+    const key = keys[0] as keyof T;
+    return chains[key];
+}
+
+/**
+ * Removes the selected chain from the list
+ * @param chains an array of supported chains
+ * @param chainName the selected one
+ * @returns the original list minus selected
+ */
+export function filterOneOut<T>(
+    chains: { [key in keyof T]: EVMChain },
+    chainName: string
+): EVMChain[] | [] {
+
+    if (chains && chainName) {
+        const chainValues: EVMChain[] | [] = Object.values(chains)
+        try {
+            return chainValues.filter(chain =>
+                chain.name.toLowerCase() !== chainName.toLowerCase());
+        } catch (error) {
+            console.error(error)
+            return [];
+        }
+
+    }
+    return [];
 }
