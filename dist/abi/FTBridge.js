@@ -16,7 +16,7 @@ const FTBridge = [
         ],
         "name": "addChain",
         "outputs": [],
-        "stateMutFTBridgelity": "nonpayable",
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -29,7 +29,7 @@ const FTBridge = [
         ],
         "name": "addValidator",
         "outputs": [],
-        "stateMutFTBridgelity": "nonpayable",
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -47,7 +47,7 @@ const FTBridge = [
         ],
         "name": "grantRole",
         "outputs": [],
-        "stateMutFTBridgelity": "nonpayable",
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -70,14 +70,14 @@ const FTBridge = [
         ],
         "name": "mapNativeContract",
         "outputs": [],
-        "stateMutFTBridgelity": "nonpayable",
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
         "inputs": [],
         "name": "pause",
         "outputs": [],
-        "stateMutFTBridgelity": "nonpayable",
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -93,7 +93,7 @@ const FTBridge = [
                 "type": "uint16"
             }
         ],
-        "stateMutFTBridgelity": "nonpayable",
+        "stateMutability": "nonpayable",
         "type": "constructor"
     },
     {
@@ -148,7 +148,7 @@ const FTBridge = [
         ],
         "name": "mapWrappedContract",
         "outputs": [],
-        "stateMutFTBridgelity": "nonpayable",
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -161,14 +161,14 @@ const FTBridge = [
         ],
         "name": "removeValidator",
         "outputs": [],
-        "stateMutFTBridgelity": "nonpayable",
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
         "inputs": [],
         "name": "unpause",
         "outputs": [],
-        "stateMutFTBridgelity": "nonpayable",
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -269,7 +269,7 @@ const FTBridge = [
         ],
         "name": "receiveInstallment",
         "outputs": [],
-        "stateMutFTBridgelity": "payable",
+        "stateMutability": "payable",
         "type": "function"
     },
     {
@@ -287,7 +287,7 @@ const FTBridge = [
         ],
         "name": "renounceRole",
         "outputs": [],
-        "stateMutFTBridgelity": "nonpayable",
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -305,7 +305,7 @@ const FTBridge = [
         ],
         "name": "revokeRole",
         "outputs": [],
-        "stateMutFTBridgelity": "nonpayable",
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -415,7 +415,7 @@ const FTBridge = [
         ],
         "name": "sendInstallment",
         "outputs": [],
-        "stateMutFTBridgelity": "payable",
+        "stateMutability": "payable",
         "type": "function"
     },
     {
@@ -475,7 +475,7 @@ const FTBridge = [
         "type": "event"
     },
     {
-        "stateMutFTBridgelity": "payable",
+        "stateMutability": "payable",
         "type": "fallback"
     },
     {
@@ -493,18 +493,18 @@ const FTBridge = [
         ],
         "name": "updateChain",
         "outputs": [],
-        "stateMutFTBridgelity": "nonpayable",
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
         "inputs": [],
         "name": "withdrawFees",
         "outputs": [],
-        "stateMutFTBridgelity": "nonpayable",
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "stateMutFTBridgelity": "payable",
+        "stateMutability": "payable",
         "type": "receive"
     },
     {
@@ -517,7 +517,7 @@ const FTBridge = [
                 "type": "uint256"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -541,7 +541,7 @@ const FTBridge = [
                 "type": "bool"
             }
         ],
-        "stateMutFTBridgelity": "pure",
+        "stateMutability": "pure",
         "type": "function"
     },
     {
@@ -554,7 +554,7 @@ const FTBridge = [
                 "type": "bytes32"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -567,7 +567,7 @@ const FTBridge = [
                 "type": "bytes32"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -580,7 +580,7 @@ const FTBridge = [
                 "type": "uint256"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -599,7 +599,7 @@ const FTBridge = [
                 "type": "bytes32"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -623,7 +623,7 @@ const FTBridge = [
                 "type": "bool"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -657,7 +657,7 @@ const FTBridge = [
                 "type": "address"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -670,7 +670,7 @@ const FTBridge = [
                 "type": "bytes32"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -683,7 +683,7 @@ const FTBridge = [
                 "type": "uint16"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -696,7 +696,7 @@ const FTBridge = [
                 "type": "string"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -720,7 +720,7 @@ const FTBridge = [
                 "type": "uint8"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -754,7 +754,7 @@ const FTBridge = [
                 "type": "string"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -767,7 +767,7 @@ const FTBridge = [
                 "type": "bool"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -780,7 +780,7 @@ const FTBridge = [
                 "type": "bytes32"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -799,7 +799,7 @@ const FTBridge = [
                 "type": "string"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -818,7 +818,7 @@ const FTBridge = [
                 "type": "bool"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -831,7 +831,7 @@ const FTBridge = [
                 "type": "uint256"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -844,7 +844,7 @@ const FTBridge = [
                 "type": "bytes32"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -868,7 +868,7 @@ const FTBridge = [
                 "type": "uint8"
             }
         ],
-        "stateMutFTBridgelity": "view",
+        "stateMutability": "view",
         "type": "function"
     }
 ];

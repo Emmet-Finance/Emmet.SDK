@@ -4,7 +4,7 @@ declare const FTBridge: ({
         name: string;
         type: string;
     }[];
-    stateMutFTBridgelity: string;
+    stateMutability: string;
     type: string;
     name?: undefined;
     anonymous?: undefined;
@@ -17,7 +17,7 @@ declare const FTBridge: ({
     }[];
     name: string;
     type: string;
-    stateMutFTBridgelity?: undefined;
+    stateMutability?: undefined;
     anonymous?: undefined;
     outputs?: undefined;
 } | {
@@ -30,7 +30,7 @@ declare const FTBridge: ({
     }[];
     name: string;
     type: string;
-    stateMutFTBridgelity?: undefined;
+    stateMutability?: undefined;
     outputs?: undefined;
 } | {
     inputs: ({
@@ -50,11 +50,11 @@ declare const FTBridge: ({
     })[];
     name: string;
     outputs: never[];
-    stateMutFTBridgelity: string;
+    stateMutability: string;
     type: string;
     anonymous?: undefined;
 } | {
-    stateMutFTBridgelity: string;
+    stateMutability: string;
     type: string;
     inputs?: undefined;
     name?: undefined;
@@ -72,7 +72,7 @@ declare const FTBridge: ({
         name: string;
         type: string;
     }[];
-    stateMutFTBridgelity: string;
+    stateMutability: string;
     type: string;
     anonymous?: undefined;
 })[];
