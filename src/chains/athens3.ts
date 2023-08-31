@@ -6,10 +6,10 @@ export const athens3: EVMChain = {
     bridge: '0x6b30f76CecE9F92D27f0e9Ad78312E77709E74A5',
     logo: LOGO_ZETA_CHAIN,
     // Common WAGMI part:
-    id: 7001, //
+    id: 7001, //0x1b59
     name: 'Athens-3',
     network: 'ZetaChain',
-    nativeCurrency: { name: 'aZETA', symbol: 'aZETA', decimals: 18 },
+    nativeCurrency: { name: 'ZETA', symbol: 'ZETA', decimals: 18 },
     rpcUrls: {
         default: { http: ['https://zetachain-athens-evm.blockpi.network/v1/rpc/public'] },
         public: { http: ['https://zetachain-athens-evm.blockpi.network/v1/rpc/public'] },
