@@ -7,7 +7,7 @@ export const athens3: EVMChain = {
     logo: LOGO_ZETA_CHAIN,
     // Common WAGMI part:
     id: 7001, //0x1b59
-    name: 'Athens-3',
+    name: 'Athens3',
     network: 'ZetaChain',
     nativeCurrency: { name: 'ZETA', symbol: 'ZETA', decimals: 18 },
     rpcUrls: {
@@ -15,7 +15,7 @@ export const athens3: EVMChain = {
         public: { http: ['https://zetachain-athens-evm.blockpi.network/v1/rpc/public'] },
     },
     blockExplorers: {
-        default: { name: 'Athens-3', url: 'https://zetachain-athens-3.blockscout.com' },
+        default: { name: 'Athens3 Explorer', url: 'https://zetachain-Athens3.blockscout.com' },
     },
     testnet:true
 } as const; // https://www.zetachain.com/docs/reference/testnet/

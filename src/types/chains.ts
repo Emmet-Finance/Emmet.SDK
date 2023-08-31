@@ -154,7 +154,7 @@ export const testnetChainNameToIndex: { [key: string]: number } = {
     'BSC Testnet': 2,
     'Mumbai': 3,
     'Sparknet': 4,
-    'Athens-3':5,
+    'Athens3':5,
 };
 
 /**
@@ -165,7 +165,7 @@ export const testnetChainIndexToName: { [key: number]: string } = {
     2: 'BSC Testnet',
     3: 'Mumbai',
     4: 'Sparknet',
-    5: 'Athens-3',
+    5: 'Athens3',
 };
 
 /**

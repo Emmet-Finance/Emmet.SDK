@@ -53,11 +53,14 @@ export function bigIntToHuman(
     }
 }
 
+export function formatChainName(chainName: string): string {
+    return chainName
+        .replace(/[^a-zA-Z0-9]/g, '')
+}
+
 export function chainNameToKey<T>(chainName: string): T {
 
-    return (chainName
-        .toLowerCase()
-        .replace(/[^a-zA-Z]/g, '') as unknown) as T;
+    return (formatChainName(chainName).toLowerCase() as unknown) as T;
 
 }
 

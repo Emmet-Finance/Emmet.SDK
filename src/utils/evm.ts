@@ -21,7 +21,7 @@ if (window && window.ethereum) {
  */
 export function detectEthereumProvider<T = EthereumProvider>(
     mustBeMetaMask = false,
-    timeout = 3000
+    timeout = 4000
 ): Promise<T | null> {
 
     let handled = false;
@@ -159,7 +159,7 @@ export async function getEvmChainId(): Promise<string> {
  */
 export function formatChainName(chainName: string): string {
     if(chainName){
-        return chainName.toLowerCase().replace(' ', '');
+        return chainName.toLowerCase().replace(/[^a-z0-9]/g, '');
     }else{
         return "";
     }
