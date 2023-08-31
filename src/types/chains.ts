@@ -9,6 +9,7 @@ import {
     polygon,
     
     TESTNETS,
+    athens3,
     bscTestnet,
     goerli,
     mumbai,
@@ -48,6 +49,7 @@ export const mainnets: EVMChain[] = [
  * Supported Testnets
  */
 export const testnets: EVMChain[] = [
+    athens3,
     bscTestnet,
     goerli,
     mumbai,
@@ -121,7 +123,8 @@ export const mainnetChainNameToIndex: { [key: string]: number } = {
     'Ethereum': 1,
     'BSC': 2,
     'Polygon': 3,
-    'Fuse': 4
+    'Fuse': 4,
+    'ZetaChain':5,
 };
 
 /**
@@ -131,14 +134,16 @@ export const mainnetChainIndexToName: { [key: number]: string } = {
     1: 'Ethereum',
     2: 'BSC',
     3: 'Polygon',
-    4: 'Fuse'
+    4: 'Fuse',
+    5: 'ZetaChain',
 };
 
 export const BridgeChainIds = {
     goerly: 1,
     bsctestnet: 2,
     mumbai:3,
-    sparknet:4
+    sparknet:4,
+    athens3:5
 }
 
 /**
@@ -148,7 +153,8 @@ export const testnetChainNameToIndex: { [key: string]: number } = {
     'Goerli': 1,
     'BSC Testnet': 2,
     'Mumbai': 3,
-    'Sparknet': 4
+    'Sparknet': 4,
+    'Athens-3':5,
 };
 
 /**
@@ -158,7 +164,8 @@ export const testnetChainIndexToName: { [key: number]: string } = {
     1: 'Goerli',
     2: 'BSC Testnet',
     3: 'Mumbai',
-    4: 'Sparknet'
+    4: 'Sparknet',
+    5: 'Athens-3',
 };
 
 /**

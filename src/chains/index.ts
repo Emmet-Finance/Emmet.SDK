@@ -1,13 +1,14 @@
 // Mainnets:
-import {bsc} from './bsc';
-import {ethereum} from './ethereum';
-import {fuse} from './fuse'
-import {polygon} from './polygon';
+import { bsc } from './bsc';
+import { ethereum } from './ethereum';
+import { fuse } from './fuse'
+import { polygon } from './polygon';
 // Testnets:
-import {bscTestnet} from './bscTestnet';
-import {goerli} from './goerly';
-import {mumbai} from './mumbai';
-import {sparknet} from './sparknet';
+import { athens3 } from './athens3';
+import { bscTestnet } from './bscTestnet';
+import { goerli } from './goerly';
+import { mumbai } from './mumbai';
+import { sparknet } from './sparknet';
 
 const MAINNETS = {
     bsc,
@@ -17,6 +18,7 @@ const MAINNETS = {
 }
 
 const TESTNETS = {
+    athens3,
     bsctestnet: bscTestnet,
     goerli,
     mumbai,
@@ -34,6 +36,7 @@ export {
     polygon,
 
     TESTNETS,
+    athens3,
     bscTestnet,
     goerli,
     mumbai,
