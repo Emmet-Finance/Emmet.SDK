@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LOGO_POLYGON = exports.LOGO_FUSE = exports.LOGO_ETHEREUM = exports.LOGO_BSC = void 0;
+exports.LOGO_ZETA_CHAIN = exports.LOGO_POLYGON = exports.LOGO_FUSE = exports.LOGO_ETHEREUM = exports.LOGO_BSC = void 0;
 exports.LOGO_BSC = `<svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="m14.719 10 2.028-2.029L18.775 10l-2.028 2.028L14.719 10zM1.222 10 3.25 7.97 5.278 10 3.25 12.027 1.222 10zM10 14.722l-3.362-3.363-2.029 2.028L10 18.779l5.39-5.39-2.027-2.029L10 14.722zM10 5.278l3.363 3.363 2.028-2.028L10 1.222l-5.39 5.39 2.027 2.029L10 5.278z" fill="#F3BA2F"/>
 <path d="m7.994 10 2.003-2.003L12 10l-2.003 2.003L7.994 10z" fill="#F3BA2F"/>
@@ -19,17 +19,21 @@ exports.LOGO_FUSE = `<svg width="100%" height="100%" viewBox="0 0 484 483" fill=
 </svg>`;
 exports.LOGO_POLYGON = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#fa9lm8z63a)">
-	<path d="m14.63 14.153 4.461-2.576a.768.768 0 0 0 .383-.663V5.761a.769.769 0 0 0-.383-.663L14.63 2.522a.768.768 0 0 0-.765 0L9.402 5.098a.768.768 0 0 0-.383.663v9.208L5.89 16.775l-3.129-1.806v-3.613l3.13-1.806 2.063 1.19V8.318l-1.681-.97a.768.768 0 0 0-.766 0L1.045 9.923a.768.768 0 0 0-.383.663v5.153c0 .272.147.526.383.663l4.462 2.576a.77.77 0 0 0 .766 0l4.462-2.576a.768.768 0 0 0 .382-.663V6.532l.057-.033 3.072-1.773 3.129 1.806v3.613l-3.129 1.806-2.06-1.19v2.424l1.677.97a.77.77 0 0 0 .766 0v-.002z" fill="url(#bauazvqg4b)"/>
+<path d="m14.63 14.153 4.461-2.576a.768.768 0 0 0 .383-.663V5.761a.769.769 0 0 0-.383-.663L14.63 2.522a.768.768 0 0 0-.765 0L9.402 5.098a.768.768 0 0 0-.383.663v9.208L5.89 16.775l-3.129-1.806v-3.613l3.13-1.806 2.063 1.19V8.318l-1.681-.97a.768.768 0 0 0-.766 0L1.045 9.923a.768.768 0 0 0-.383.663v5.153c0 .272.147.526.383.663l4.462 2.576a.77.77 0 0 0 .766 0l4.462-2.576a.768.768 0 0 0 .382-.663V6.532l.057-.033 3.072-1.773 3.129 1.806v3.613l-3.129 1.806-2.06-1.19v2.424l1.677.97a.77.77 0 0 0 .766 0v-.002z" fill="url(#bauazvqg4b)"/>
 </g>
 <defs>
-	<linearGradient id="bauazvqg4b" x1="2.261" y1="16.442" x2="18.429" y2="4.653" gradientUnits="userSpaceOnUse">
-		<stop stop-color="#9A3C8F"/>
-		<stop offset=".98" stop-color="#734D9A"/>
-		<stop offset="1" stop-color="#734E9B"/>
-	</linearGradient>
-	<clipPath id="fa9lm8z63a">
-		<path fill="#fff" transform="translate(.068 .75)" d="M0 0h20v20H0z"/>
-	</clipPath>
+<linearGradient id="bauazvqg4b" x1="2.261" y1="16.442" x2="18.429" y2="4.653" gradientUnits="userSpaceOnUse">
+<stop stop-color="#9A3C8F"/>
+<stop offset=".98" stop-color="#734D9A"/>
+<stop offset="1" stop-color="#734E9B"/>
+</linearGradient>
+<clipPath id="fa9lm8z63a">
+<path fill="#fff" transform="translate(.068 .75)" d="M0 0h20v20H0z"/>
+</clipPath>
 </defs>
+</svg>`;
+exports.LOGO_ZETA_CHAIN = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-green-700 dark:text-grey-50 w-[100px] sm:w-auto">
+<path d="M16.807 17.2227V20.4134H3.64454C3.82611 18.3135 4.5037 16.8359 6.84699 14.7584L16.807 6.2615V13.7177H20.3923V0H0.00394715V6.83778H3.58796V3.58533H14.4189L4.50765 12.0428L4.48396 12.0651C0.330245 15.7426 0 18.7108 0 22.208V24H20.391V17.2241H16.8057L16.807 17.2227Z" fill="currentColor">
+</path>
 </svg>`;
 //# sourceMappingURL=chains.js.map
