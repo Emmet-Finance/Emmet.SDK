@@ -59,14 +59,14 @@ exports.testnetChainNameToIndex = {
     'BSC Testnet': 2,
     'Mumbai': 3,
     'Sparknet': 4,
-    'Athens-3': 5,
+    'Athens3': 5,
 };
 exports.testnetChainIndexToName = {
     1: 'Goerli',
     2: 'BSC Testnet',
     3: 'Mumbai',
     4: 'Sparknet',
-    5: 'Athens-3',
+    5: 'Athens3',
 };
 exports.allChainNameToIndex = exports.mainnetChainNameToIndex && exports.testnetChainNameToIndex;
 exports.allChainIndexToName = exports.mainnetChainIndexToName && exports.testnetChainIndexToName;
