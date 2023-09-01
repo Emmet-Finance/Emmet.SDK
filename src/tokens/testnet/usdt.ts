@@ -16,7 +16,7 @@ const USDT: SupportedTokenType = {
     decimals: 18,
     logo: LOGO_USDT,
     name: "USDT",
-    native: "goerly"
+    native: "goerli"
 }
 
 export default USDT;

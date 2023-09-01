@@ -43,7 +43,7 @@ Every new token record must be represented like in this example:
         "name":"USDT",
         "native":{
             "address":"0x291E558C60FB567087D9b87bd62b84Af67b9a376",
-            "chain":"goerly"
+            "chain":"goerli"
         },
         "wrapped":[
             {

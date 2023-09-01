@@ -16,7 +16,7 @@ const DAI: SupportedTokenType = {
     decimals: 18,
     logo: LOGO_DAI,
     name: "DAI",
-    native: "goerly"
+    native: "goerli"
 }
 
 export default DAI;

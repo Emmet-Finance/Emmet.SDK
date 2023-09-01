@@ -24,9 +24,9 @@ Wehere `<environment>` must be replaced with `mainnet` | `testnet`.
 Example:
 
 ```json
-"goerly": {
+"goerli": {
         "bridge": "0x52c5cF8d571b1c8cBF75b5f1bD088C1Dd4598bC7",
-        "chainName": "Goerly",
+        "chainName": "goerli",
         "chainId": "0x5",
         "explorer": "https://goerli.etherscan.io",
         "logo":"eth.svg",

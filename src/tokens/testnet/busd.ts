@@ -16,7 +16,7 @@ const BUSD: SupportedTokenType = {
     decimals: 18,
     logo: LOGO_BUSD,
     name: "BUSD",
-    native: "goerly"
+    native: "goerli"
 }
 
 export default BUSD;
