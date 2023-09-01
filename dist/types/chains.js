@@ -48,7 +48,7 @@ exports.mainnetChainIndexToName = {
     5: 'ZetaChain',
 };
 exports.BridgeChainIds = {
-    goerly: 1,
+    goerli: 1,
     bsctestnet: 2,
     mumbai: 3,
     sparknet: 4,

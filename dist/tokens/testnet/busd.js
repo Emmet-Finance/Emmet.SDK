@@ -17,7 +17,7 @@ const BUSD = {
     decimals: 18,
     logo: tokens_1.LOGO_BUSD,
     name: "BUSD",
-    native: "goerly"
+    native: "goerli"
 };
 exports.default = BUSD;
 //# sourceMappingURL=busd.js.map

@@ -17,7 +17,7 @@ const DAI = {
     decimals: 18,
     logo: tokens_1.LOGO_DAI,
     name: "DAI",
-    native: "goerly"
+    native: "goerli"
 };
 exports.default = DAI;
 //# sourceMappingURL=dai.js.map

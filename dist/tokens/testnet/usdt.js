@@ -17,7 +17,7 @@ const USDT = {
     decimals: 18,
     logo: tokens_1.LOGO_USDT,
     name: "USDT",
-    native: "goerly"
+    native: "goerli"
 };
 exports.default = USDT;
 //# sourceMappingURL=usdt.js.map

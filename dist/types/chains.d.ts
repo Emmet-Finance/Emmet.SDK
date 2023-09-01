@@ -26,7 +26,7 @@ export declare const mainnetChainIndexToName: {
     [key: number]: string;
 };
 export declare const BridgeChainIds: {
-    goerly: number;
+    goerli: number;
     bsctestnet: number;
     mumbai: number;
     sparknet: number;

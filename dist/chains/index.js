@@ -13,8 +13,8 @@ const athens3_1 = require("./athens3");
 Object.defineProperty(exports, "athens3", { enumerable: true, get: function () { return athens3_1.athens3; } });
 const bscTestnet_1 = require("./bscTestnet");
 Object.defineProperty(exports, "bscTestnet", { enumerable: true, get: function () { return bscTestnet_1.bscTestnet; } });
-const goerly_1 = require("./goerly");
-Object.defineProperty(exports, "goerli", { enumerable: true, get: function () { return goerly_1.goerli; } });
+const goerli_1 = require("./goerli");
+Object.defineProperty(exports, "goerli", { enumerable: true, get: function () { return goerli_1.goerli; } });
 const mumbai_1 = require("./mumbai");
 Object.defineProperty(exports, "mumbai", { enumerable: true, get: function () { return mumbai_1.mumbai; } });
 const sparknet_1 = require("./sparknet");
@@ -29,7 +29,7 @@ exports.MAINNETS = MAINNETS;
 const TESTNETS = {
     athens3: athens3_1.athens3,
     bsctestnet: bscTestnet_1.bscTestnet,
-    goerli: goerly_1.goerli,
+    goerli: goerli_1.goerli,
     mumbai: mumbai_1.mumbai,
     sparknet: sparknet_1.sparknet
 };

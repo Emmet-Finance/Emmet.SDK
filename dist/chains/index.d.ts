@@ -4,7 +4,7 @@ import { fuse } from './fuse';
 import { polygon } from './polygon';
 import { athens3 } from './athens3';
 import { bscTestnet } from './bscTestnet';
-import { goerli } from './goerly';
+import { goerli } from './goerli';
 import { mumbai } from './mumbai';
 import { sparknet } from './sparknet';
 declare const MAINNETS: {
