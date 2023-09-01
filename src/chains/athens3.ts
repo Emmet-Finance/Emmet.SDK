@@ -15,7 +15,7 @@ export const athens3: EVMChain = {
         public: { http: ['https://zetachain-athens-evm.blockpi.network/v1/rpc/public'] },
     },
     blockExplorers: {
-        default: { name: 'Athens3 Explorer', url: 'https://zetachain-Athens3.blockscout.com' },
+        default: { name: 'Athens3 Explorer', url: 'https://zetachain-Athens-3.blockscout.com' },
     },
     testnet:true
 } as const; // https://www.zetachain.com/docs/reference/testnet/

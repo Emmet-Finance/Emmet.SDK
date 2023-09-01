@@ -10,6 +10,7 @@ const DAI: SupportedTokenType = {
         bsctestnet:"0x2AEaD32687aB9D18bb63248f94cD0ADA3ce45ce0",
         mumbai:"0xD55C04E15B9808bf3e561367D12f3B2dfAA55d48",
         sparknet:"0xe0157e7a2C90A88371b508aD5818715680010086",
+        athens3:"0x34356c720F14b7F647f79436d6d8891b3D048fd3",
     } as ContractAddress,
     abi: DAI_ABI,
     decimals: 18,
