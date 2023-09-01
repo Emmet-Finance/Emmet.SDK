@@ -53,14 +53,29 @@ export function bigIntToHuman(
     }
 }
 
+
+/**
+ * Formats a chain name to match hashmap keys
+ * @param chainName a chain name to be formatted
+ * @returns a loercased chain name without spaces
+ */
+export function formatChainName(chainName: string): string {
+    if (chainName) {
+        return formatChainNameMixedCase(chainName).toLowerCase();
+    }
+    return '';
+}
+
 export function formatChainNameMixedCase(chainName: string): string {
-    return chainName
-        .replace(/[^a-zA-Z0-9]/g, '')
+    if (chainName) {
+        return chainName.replace(/[^a-zA-Z0-9]/g, '')
+    }
+    return '';
 }
 
 export function chainNameToKey<T>(chainName: string): T {
 
-    return (formatChainNameMixedCase(chainName).toLowerCase() as unknown) as T;
+    return (formatChainName(chainName) as unknown) as T;
 
 }
 

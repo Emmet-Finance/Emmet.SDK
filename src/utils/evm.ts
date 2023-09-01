@@ -2,6 +2,7 @@ import { ALL_CHAINS } from '../chains';
 import { EthereumProvider } from '../interfaces';
 import { EVMChain } from '../types';
 import EtherConstants, { MESSAGE_TYPE } from '../wallets/EthreumConstants';
+import { formatChainName } from './format';
 
 // Ensure that the 'window' object is available in the browser environment
 const window = typeof globalThis !== 'undefined' ? globalThis.window : null;
@@ -149,20 +150,6 @@ export async function getEvmChainId(): Promise<string> {
         throw new Error("Failed to get the current chain ID");
     }
     return "";
-}
-
-
-/**
- * Formats a chain name to match hashmap keys
- * @param chainName a chain name to be formatted
- * @returns a loercased chain name without spaces
- */
-export function formatChainName(chainName: string): string {
-    if(chainName){
-        return chainName.toLowerCase().replace(/[^a-z0-9]/g, '');
-    }else{
-        return "";
-    }
 }
 
 

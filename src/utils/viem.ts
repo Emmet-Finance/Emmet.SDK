@@ -23,7 +23,7 @@ import {
 import { testnetTokens } from '../tokens';
 import { ALL_CHAINS } from '../chains';
 import FTBridge from '../abi/FTBridge';
-
+import { formatChainName } from './format';
 
 /**
  * @dev Approves the bridge to spend the `amount` of ERC20
@@ -56,9 +56,7 @@ export async function approveERC20(
     ];
 
     const tokenContractAddress: string = tokenContract.address[
-        chainName
-            .toLocaleLowerCase()
-            .replace(/[^a-z]/g, '') // remove spaces, etc.
+        formatChainName(chainName)
     ];
 
     const { request } = await publicClient.simulateContract({
@@ -83,9 +81,7 @@ export async function approveERC20(
 export async function config(chainName: TChainName) {
 
     const chain = ALL_CHAINS[
-        chainName
-            .toLocaleLowerCase()
-            .replace(/[^a-zA-Z]/g, '') as keyof typeof ALL_CHAINS
+        formatChainName(chainName) as keyof typeof ALL_CHAINS
     ];
 
     const publicClient = createPublicClient({
@@ -284,7 +280,7 @@ export async function getEvmTokenAllowances(
                     publicClient,
                 );
 
-                const chain = ALL_CHAINS[chainName.toLowerCase().replace(/[^a-zA-Z]/g, '') as keyof typeof ALL_CHAINS];
+                const chain = ALL_CHAINS[formatChainName(chainName) as keyof typeof ALL_CHAINS];
 
                 allowances[tokenName] = (await contract.read.allowance([
                     account,
@@ -318,7 +314,7 @@ export async function getEvmTokenBalances(
 
             const token = testnetTokens[tokenName]
 
-            const address: string = token.address[chainName.toLowerCase().replace(' ', '')];
+            const address: string = token.address[formatChainName(chainName)];
 
             if (address && publicClient) {
 
@@ -390,9 +386,7 @@ export async function transferERC20(
     } = await config(fromChain);
 
     const chainId: number = BridgeChainIds[
-        toChainName
-            .toLocaleLowerCase()
-            .replace(/[^a-z]/g, '') as keyof typeof BridgeChainIds]
+        formatChainName(toChainName) as keyof typeof BridgeChainIds]
 
     const bridgeAddress: string = chain.bridge;
 
@@ -444,9 +438,7 @@ export function findChain<T>(
     chainName: string
 ): EVMChain {
     if (chains && chainName) {
-        const cleanName = chainName
-            .toLowerCase()
-            .replace(/[^a-z]/g, '')
+        const cleanName = formatChainName(chainName)
         return chains[cleanName as keyof T]
     }
     const keys = Object.keys(chains);
