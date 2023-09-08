@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sparknet = exports.mumbai = exports.goerli = exports.bscTestnet = exports.athens3 = exports.TESTNETS = exports.polygon = exports.fuse = exports.ethereum = exports.bsc = exports.MAINNETS = exports.ALL_CHAINS = void 0;
+exports.sparknet = exports.mumbai = exports.goerli = exports.bscTestnet = exports.basegoerli = exports.athens3 = exports.TESTNETS = exports.polygon = exports.fuse = exports.ethereum = exports.bsc = exports.base = exports.MAINNETS = exports.ALL_CHAINS = void 0;
 const bsc_1 = require("./bsc");
 Object.defineProperty(exports, "bsc", { enumerable: true, get: function () { return bsc_1.bsc; } });
 const ethereum_1 = require("./ethereum");
@@ -11,6 +11,10 @@ const polygon_1 = require("./polygon");
 Object.defineProperty(exports, "polygon", { enumerable: true, get: function () { return polygon_1.polygon; } });
 const athens3_1 = require("./athens3");
 Object.defineProperty(exports, "athens3", { enumerable: true, get: function () { return athens3_1.athens3; } });
+const base_1 = require("./base");
+Object.defineProperty(exports, "base", { enumerable: true, get: function () { return base_1.base; } });
+const basegoerli_1 = require("./basegoerli");
+Object.defineProperty(exports, "basegoerli", { enumerable: true, get: function () { return basegoerli_1.basegoerli; } });
 const bscTestnet_1 = require("./bscTestnet");
 Object.defineProperty(exports, "bscTestnet", { enumerable: true, get: function () { return bscTestnet_1.bscTestnet; } });
 const goerli_1 = require("./goerli");
@@ -20,6 +24,7 @@ Object.defineProperty(exports, "mumbai", { enumerable: true, get: function () { 
 const sparknet_1 = require("./sparknet");
 Object.defineProperty(exports, "sparknet", { enumerable: true, get: function () { return sparknet_1.sparknet; } });
 const MAINNETS = {
+    base: base_1.base,
     bsc: bsc_1.bsc,
     ethereum: ethereum_1.ethereum,
     fuse: fuse_1.fuse,
@@ -28,6 +33,7 @@ const MAINNETS = {
 exports.MAINNETS = MAINNETS;
 const TESTNETS = {
     athens3: athens3_1.athens3,
+    basegoerli: basegoerli_1.basegoerli,
     bsctestnet: bscTestnet_1.bscTestnet,
     goerli: goerli_1.goerli,
     mumbai: mumbai_1.mumbai,

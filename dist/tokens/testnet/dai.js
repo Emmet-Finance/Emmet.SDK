@@ -12,6 +12,7 @@ const DAI = {
         mumbai: "0xD55C04E15B9808bf3e561367D12f3B2dfAA55d48",
         sparknet: "0xe0157e7a2C90A88371b508aD5818715680010086",
         athens3: "0x34356c720F14b7F647f79436d6d8891b3D048fd3",
+        basegoerli: "0x34356c720F14b7F647f79436d6d8891b3D048fd3",
     },
     abi: dai_1.default,
     decimals: 18,

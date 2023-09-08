@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LOGO_ZETA_CHAIN = exports.LOGO_POLYGON = exports.LOGO_FUSE = exports.LOGO_ETHEREUM = exports.LOGO_BSC = void 0;
+exports.LOGO_ZETA_CHAIN = exports.LOGO_POLYGON = exports.LOGO_FUSE = exports.LOGO_ETHEREUM = exports.LOGO_BSC = exports.LOGO_BASE = void 0;
+exports.LOGO_BASE = `<svg width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M54.921 110.034C85.359 110.034 110.034 85.402 110.034 55.017C110.034 24.6319 85.359 0 54.921 0C26.0432 0 2.35281 22.1714 0 50.3923H72.8467V59.6416H3.9565e-07C2.35281 87.8625 26.0432 110.034 54.921 110.034Z" fill="#0052FF"/>
+</svg>`;
 exports.LOGO_BSC = `<svg width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="m14.719 10 2.028-2.029L18.775 10l-2.028 2.028L14.719 10zM1.222 10 3.25 7.97 5.278 10 3.25 12.027 1.222 10zM10 14.722l-3.362-3.363-2.029 2.028L10 18.779l5.39-5.39-2.027-2.029L10 14.722zM10 5.278l3.363 3.363 2.028-2.028L10 1.222l-5.39 5.39 2.027 2.029L10 5.278z" fill="#F3BA2F"/>
 <path d="m7.994 10 2.003-2.003L12 10l-2.003 2.003L7.994 10z" fill="#F3BA2F"/>

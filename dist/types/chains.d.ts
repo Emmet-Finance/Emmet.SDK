@@ -31,6 +31,7 @@ export declare const BridgeChainIds: {
     mumbai: number;
     sparknet: number;
     athens3: number;
+    basegoerli: number;
 };
 export declare const testnetChainNameToIndex: {
     [key: string]: number;

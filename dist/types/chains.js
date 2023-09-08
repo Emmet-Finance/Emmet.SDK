@@ -39,6 +39,7 @@ exports.mainnetChainNameToIndex = {
     'Polygon': 3,
     'Fuse': 4,
     'ZetaChain': 5,
+    'BASE': 6
 };
 exports.mainnetChainIndexToName = {
     1: 'Ethereum',
@@ -46,13 +47,15 @@ exports.mainnetChainIndexToName = {
     3: 'Polygon',
     4: 'Fuse',
     5: 'ZetaChain',
+    6: 'BASE'
 };
 exports.BridgeChainIds = {
     goerli: 1,
     bsctestnet: 2,
     mumbai: 3,
     sparknet: 4,
-    athens3: 5
+    athens3: 5,
+    basegoerli: 6
 };
 exports.testnetChainNameToIndex = {
     'Goerli': 1,
@@ -60,6 +63,7 @@ exports.testnetChainNameToIndex = {
     'Mumbai': 3,
     'Sparknet': 4,
     'Athens3': 5,
+    'Base Goerli': 6
 };
 exports.testnetChainIndexToName = {
     1: 'Goerli',
@@ -67,6 +71,7 @@ exports.testnetChainIndexToName = {
     3: 'Mumbai',
     4: 'Sparknet',
     5: 'Athens3',
+    6: 'Base Goerli'
 };
 exports.allChainNameToIndex = exports.mainnetChainNameToIndex && exports.testnetChainNameToIndex;
 exports.allChainIndexToName = exports.mainnetChainIndexToName && exports.testnetChainIndexToName;
