@@ -125,6 +125,7 @@ export const mainnetChainNameToIndex: { [key: string]: number } = {
     'Polygon': 3,
     'Fuse': 4,
     'ZetaChain':5,
+    'BASE':6
 };
 
 /**
@@ -136,6 +137,7 @@ export const mainnetChainIndexToName: { [key: number]: string } = {
     3: 'Polygon',
     4: 'Fuse',
     5: 'ZetaChain',
+    6: 'BASE'
 };
 
 export const BridgeChainIds = {
@@ -143,7 +145,8 @@ export const BridgeChainIds = {
     bsctestnet: 2,
     mumbai:3,
     sparknet:4,
-    athens3:5
+    athens3:5,
+    basegoerli:6
 }
 
 /**
@@ -155,6 +158,7 @@ export const testnetChainNameToIndex: { [key: string]: number } = {
     'Mumbai': 3,
     'Sparknet': 4,
     'Athens3':5,
+    'Base Goerli':6
 };
 
 /**
@@ -166,6 +170,7 @@ export const testnetChainIndexToName: { [key: number]: string } = {
     3: 'Mumbai',
     4: 'Sparknet',
     5: 'Athens3',
+    6: 'Base Goerli'
 };
 
 /**
