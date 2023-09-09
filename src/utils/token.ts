@@ -1,5 +1,6 @@
 import { SupportedTokenType } from '../types';
 import { formatChainName } from './format';
+import { testnetTokens, mainnetTokens } from '../tokens';
 
 /**
  * Checks if a token is some blockchain's native coin.
@@ -19,9 +20,14 @@ export function isNativeCoin(token: SupportedTokenType): boolean {
  * @returns `true` if the token is the native coin of the chain, `false` otherwise.
  */
 export function isThisChainsNativeCoin(
-    token: SupportedTokenType,
-    chainName: string
+    token: string,
+    chainName: string,
+    network: 'testnet' | 'mainnet'
 ): boolean {
-    return isNativeCoin(token)
-        && token.native === formatChainName(chainName);
+    const tokens = network === 'testnet'
+        ? testnetTokens
+        : mainnetTokens;
+    const _token = tokens[token];
+    return isNativeCoin(_token)
+        && _token.native === formatChainName(chainName);
 }
