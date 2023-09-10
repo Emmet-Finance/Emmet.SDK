@@ -4,7 +4,7 @@ import { ChainIdToNameMap, ChainNameToId, EVMChainMap } from '../interfaces/chai
 import {
     MAINNETS,
     bsc,
-    ethereum,
+    Mainnet,
     fuse,
     polygon,
     
@@ -40,7 +40,7 @@ export type EVMChain = wagmiChain & EmmetChain;
  */
 export const mainnets: EVMChain[] = [
     bsc,
-    ethereum,
+    Mainnet,
     fuse,
     polygon
 ];
@@ -120,7 +120,7 @@ export const AllChainNamesToId: ChainNameToId = mainnetChainIds && testnetChainI
  * O(1) conversion of a mainnet chain's name to its internal bridge index
  */
 export const mainnetChainNameToIndex: { [key: string]: number } = {
-    'Ethereum': 1,
+    'Mainnet': 1,
     'BSC': 2,
     'Polygon': 3,
     'Fuse': 4,
@@ -132,7 +132,7 @@ export const mainnetChainNameToIndex: { [key: string]: number } = {
  * O(1) conversion of a mainnet chain's internal bridge index to its name
  */
 export const mainnetChainIndexToName: { [key: number]: string } = {
-    1: 'Ethereum',
+    1: 'Mainnet',
     2: 'BSC',
     3: 'Polygon',
     4: 'Fuse',

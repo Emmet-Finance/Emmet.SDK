@@ -1,6 +1,6 @@
 // Mainnets:
 import { bsc } from './bsc';
-import { ethereum } from './ethereum';
+import { ethereum as Mainnet } from './ethereum';
 import { fuse } from './fuse'
 import { polygon } from './polygon';
 // Testnets:
@@ -15,7 +15,7 @@ import { sparknet } from './sparknet';
 const MAINNETS = {
     base,
     bsc,
-    ethereum,
+    Mainnet,
     fuse,
     polygon
 }
@@ -36,7 +36,7 @@ export {
     MAINNETS,
     base,
     bsc,
-    ethereum,
+    Mainnet,
     fuse,
     polygon,
 

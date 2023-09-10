@@ -31,3 +31,10 @@ declare global {
 }
 
 export declare let window: Window & typeof globalThis;
+
+
+export const ethereum: EthereumProvider | undefined = window && window.ethereum
+    ? window.ethereum
+    : undefined;
+
+export const BigInt: BigIntConstructor = window!.BigInt;
