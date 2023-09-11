@@ -4,7 +4,7 @@ exports.allChainIndexToName = exports.allChainNameToIndex = exports.testnetChain
 const chains_1 = require("../chains");
 exports.mainnets = [
     chains_1.bsc,
-    chains_1.ethereum,
+    chains_1.Mainnet,
     chains_1.fuse,
     chains_1.polygon
 ];
@@ -34,7 +34,7 @@ exports.testnets.map((net) => {
 exports.ChainIdToName = exports.mainnetChainIdToName && exports.testnetChainIdToName;
 exports.AllChainNamesToId = exports.mainnetChainIds && exports.testnetChainIds;
 exports.mainnetChainNameToIndex = {
-    'Ethereum': 1,
+    'Mainnet': 1,
     'BSC': 2,
     'Polygon': 3,
     'Fuse': 4,
@@ -42,7 +42,7 @@ exports.mainnetChainNameToIndex = {
     'BASE': 6
 };
 exports.mainnetChainIndexToName = {
-    1: 'Ethereum',
+    1: 'Mainnet',
     2: 'BSC',
     3: 'Polygon',
     4: 'Fuse',

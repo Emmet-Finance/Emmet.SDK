@@ -1,5 +1,5 @@
 import { bsc } from './bsc';
-import { ethereum } from './ethereum';
+import { ethereum as Mainnet } from './ethereum';
 import { fuse } from './fuse';
 import { polygon } from './polygon';
 import { athens3 } from './athens3';
@@ -12,7 +12,7 @@ import { sparknet } from './sparknet';
 declare const MAINNETS: {
     base: import("..").EVMChain;
     bsc: import("..").EVMChain;
-    ethereum: import("..").EVMChain;
+    Mainnet: import("..").EVMChain;
     fuse: import("..").EVMChain;
     polygon: import("..").EVMChain;
 };
@@ -32,4 +32,4 @@ declare const ALL_CHAINS: {
     mumbai: import("..").EVMChain;
     sparknet: import("..").EVMChain;
 };
-export { ALL_CHAINS, MAINNETS, base, bsc, ethereum, fuse, polygon, TESTNETS, athens3, basegoerli, bscTestnet, goerli, mumbai, sparknet, };
+export { ALL_CHAINS, MAINNETS, base, bsc, Mainnet, fuse, polygon, TESTNETS, athens3, basegoerli, bscTestnet, goerli, mumbai, sparknet, };

@@ -27,3 +27,5 @@ declare global {
     }
 }
 export declare let window: Window & typeof globalThis;
+export declare const ethereum: EthereumProvider | undefined;
+export declare const BigInt: BigIntConstructor;
