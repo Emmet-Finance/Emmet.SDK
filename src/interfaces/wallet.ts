@@ -37,4 +37,4 @@ export const ethereum: EthereumProvider | undefined = window && window.ethereum
     ? window.ethereum
     : undefined;
 
-export const BigInt: BigIntConstructor = window!.BigInt;
+export const BigInt: BigIntConstructor | undefined = window ? window.BigInt : undefined;
