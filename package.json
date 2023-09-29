@@ -1,6 +1,6 @@
 {
   "name": "emmet.sdk",
-  "version": "0.1.5",
+  "version": "0.1.51",
   "description": "Emmet.Bridge SDK library",
   "main": "index.js",
   "scripts": {

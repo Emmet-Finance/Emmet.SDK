@@ -8,18 +8,21 @@ import { getPublicClient } from "./getPublicClient";
 /**
  * Loops through Token contracts & extracts user balances
  * @param account checked account
- * @returns an empty or filled `balances` Object
+ * @param chainName the name of the required chain
+ * @param provider an EVM chain connection and interaction provider
+ * @returns filled `balances` Object | undefined
  */
 export async function getEvmTokenBalances(
     account: string,
-    chainName: TChainName
+    chainName: TChainName,
+    provider: any
 ): Promise<TokenBalanceObject | undefined> {
 
     let balances: { [key: TTestnetTokenNames | string]: string } = {};
 
     if (isEvmAddress(account) && chainName) {
 
-        const publicClient = getPublicClient(account, chainName, testnets, true);
+        const publicClient = getPublicClient(account, chainName, testnets, provider, true);
 
         for await (const tokenName of TestnetTokenNames) {
 

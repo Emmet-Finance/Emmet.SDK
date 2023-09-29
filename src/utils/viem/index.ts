@@ -7,7 +7,7 @@
 // export * from './findChain'
 // export * from './getContract'
 export * from './getEvmTokenAllowances'
-// export * from './getEvmTokenBalances'
+export * from './getEvmTokenBalances'
 export * from './getPublicClient'
 // export * from './getTransaction'
 // export * from './transferERC20'
