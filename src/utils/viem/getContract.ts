@@ -12,9 +12,11 @@ export function getContract(
     abi: any,
     publicClient: PublicClient | undefined
 ) {
-    return getViemContract({
+    const contract = getViemContract({
         address: `0x${address.slice(2)}`,
         abi,
         publicClient,
     });
+    console.log("getContract:", contract)
+    return contract;
 }
