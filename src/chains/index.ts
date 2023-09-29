@@ -28,7 +28,7 @@ const TESTNETS = {
     basegoerli,
     bsctestnet: bscTestnet,
     goerli,
-    lineaTestnet,
+    lineatestnet: lineaTestnet,
     mumbai,
     sparknet
 }
