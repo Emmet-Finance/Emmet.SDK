@@ -9,7 +9,7 @@ export const basegoerli: EVMChain = {
     id: 84531,
     network: 'base-goerli',
     name: 'Base Goerli',
-    nativeCurrency: { name: 'Goerli Ether', symbol: 'ETH', decimals: 18 },
+    nativeCurrency: { name: 'Goerli Ether', symbol: 'BETH', decimals: 18 },
     rpcUrls: {
       default: {
         http: ['https://goerli.base.org'],
