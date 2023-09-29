@@ -1,7 +1,6 @@
-import { testnetTokens, mainnetTokens } from '../../tokens';
-import { formatChainName } from '../format';
-import { isNativeCoin } from './isNativeCoin';
-
+import { mainnetTokens, testnetTokens } from "../../tokens";
+import { formatChainName } from "../format";
+import { isNativeCoin } from "../verifiers";
 
 /**
  * Checks if a token is the native coin of the specified chain.
@@ -15,10 +14,11 @@ export function isThisChainsNativeCoin(
     chainName: string,
     network: 'testnet' | 'mainnet'
 ): boolean {
-    const tokens = network === 'testnet'
+    const tokens: any = network === 'testnet'
         ? testnetTokens
         : mainnetTokens;
     const _token = tokens[token];
-    return isNativeCoin(_token)
-        && _token.native === formatChainName(chainName);
+    const isNative = isNativeCoin(_token)
+    const tokenNative = _token.native === formatChainName(chainName)
+    return isNative && tokenNative;
 }
