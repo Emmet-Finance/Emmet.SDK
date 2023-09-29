@@ -18,4 +18,5 @@ __exportStar(require("./evm"), exports);
 __exportStar(require("./format"), exports);
 __exportStar(require("./time"), exports);
 __exportStar(require("./verifiers"), exports);
+__exportStar(require("./viem"), exports);
 //# sourceMappingURL=index.js.map
