@@ -7,16 +7,18 @@ import { isEvmAddress } from "../verifiers";
  * @param address of a user
  * @param chainName the connected chain name
  * @param blockchains an array of supported chains
+ * @param provider an EVM provider enabling chain interaction
  * @param isSigner a flag wheather can sign & write
  * @param url custom RPC uri
- * @returns 
+ * @returns PublicClient | undefined
  */
 export function getPublicClient(
     address: string,
     chainName: TChainName,
     blockchains: EVMChain[],
+    provider:any,
     isSigner: boolean = false,
-    url: string = ''
+    url: string = '',
 ): PublicClient | undefined {
     if (isEvmAddress(address)) {
         const selectedChain = blockchains.filter(net =>
@@ -24,7 +26,7 @@ export function getPublicClient(
 
         return createPublicClient({
             chain: selectedChain,
-            transport: isSigner ? custom(window?.ethereum!) : http(url),
+            transport: isSigner ? custom(provider) : http(url),
         });
     }
     return undefined;
