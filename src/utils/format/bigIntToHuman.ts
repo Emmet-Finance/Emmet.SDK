@@ -1,7 +1,6 @@
 import { formatFractionalPart } from "./formatFractionalPart";
 import { isHexString } from "../verifiers";
 import { zerroPadding } from "./zerroPadding";
-import { roundToDecimalPlaces } from './roundToDecimalPlaces'
 import { hexToDecimalString } from "./hexToDecimalString";
 
 /**
@@ -49,9 +48,11 @@ export function bigIntToHuman(
                 }
                 break;
             case 'number':
-                // Convert the floating-point number to a string
-                const floatString = roundToDecimalPlaces(n, parseInt(decimals.toString())); // decimal places for precision
-                [whole, fraction] = floatString.split('.');
+                whole = parseInt(n.toString());
+                fraction = (parseFloat(n.toString()) - whole)
+                    .toString()
+                    .split('.')[1]
+                fraction = parseInt(fraction) > 0 ? parseInt(fraction) : 0;
                 break;
             case 'bigint':
                 whole = BigInt(n) / divider;
@@ -60,13 +61,16 @@ export function bigIntToHuman(
         }
 
         if (fraction) {
-            const formattedFractionalPart = formatFractionalPart(zerroPadding(fraction, decimals));
+            let formattedFractionalPart = formatFractionalPart(zerroPadding(fraction, decimals, 8));
+            if (formattedFractionalPart.length > 8) {
+                formattedFractionalPart = formattedFractionalPart.slice(0, 8)
+            }
             return `${whole.toLocaleString()}.${formattedFractionalPart}`
         } else {
-            return whole.toLocaleString();
+            return whole ? whole.toLocaleString() : '0.00';
         }
 
     } else {
-        return ''
+        return '0.00'
     }
 }

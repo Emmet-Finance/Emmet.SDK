@@ -1,4 +1,5 @@
-import { toBigInt } from "./toBigInt";
+import { isHexString } from "../verifiers";
+import { hexToDecimalString } from "./hexToDecimalString";
 
 /**
  * Converts two values to BigInt and returns them as properties within an object.
@@ -25,5 +26,23 @@ export function format2BigInt(
     a: string | number | bigint,
     b: string | number | bigint
 ): { _a: bigint, _b: bigint } {
-    return { _a: toBigInt(a), _b: toBigInt(b) }
+    let _a, _b;
+    if (a && typeof a === 'string') {
+        if (isHexString(a)){
+            _a = hexToDecimalString(a)
+        }else{
+            _a = a.replace(/[^0-9]/g, '')
+        }
+    }
+    else { _a = a }
+    if (b && typeof b === 'string') { 
+        if(isHexString(b)){
+            _b = hexToDecimalString(b)
+        }else{
+            _b = b.replace(/[^0-9]/g, '')
+        }
+         
+    }
+    else { _b = b }
+    return { _a: _a ? BigInt(_a) : 0n, _b: _b ? BigInt(_b) : 0n }
 }
