@@ -41,7 +41,7 @@ const TESTNETS = {
     basegoerli: basegoerli_1.basegoerli,
     bsctestnet: bscTestnet_1.bscTestnet,
     goerli: goerli_1.goerli,
-    lineaTestnet: lineaTestnet_1.lineaTestnet,
+    lineatestnet: lineaTestnet_1.lineaTestnet,
     mumbai: mumbai_1.mumbai,
     sparknet: sparknet_1.sparknet
 };

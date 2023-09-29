@@ -24,7 +24,7 @@ declare const TESTNETS: {
     basegoerli: import("..").EVMChain;
     bsctestnet: import("..").EVMChain;
     goerli: import("..").EVMChain;
-    lineaTestnet: import("..").EVMChain;
+    lineatestnet: import("..").EVMChain;
     mumbai: import("..").EVMChain;
     sparknet: import("..").EVMChain;
 };
@@ -33,7 +33,7 @@ declare const ALL_CHAINS: {
     basegoerli: import("..").EVMChain;
     bsctestnet: import("..").EVMChain;
     goerli: import("..").EVMChain;
-    lineaTestnet: import("..").EVMChain;
+    lineatestnet: import("..").EVMChain;
     mumbai: import("..").EVMChain;
     sparknet: import("..").EVMChain;
 };
