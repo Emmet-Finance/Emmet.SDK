@@ -12,6 +12,7 @@ const BUSD: SupportedTokenType = {
         sparknet:"0xbF99037F929222cc7C0aa67acd91A12f4782b96A",
         athens3:"0x4D2E1a2Dd8fd4F60295d4F46F3B783dC5b5570F3",
         basegoerli:"0x4D2E1a2Dd8fd4F60295d4F46F3B783dC5b5570F3",
+        linea:"0xA0C581aA8656277Fa390b0a234C7738514c99949",
     } as ContractAddress,
     abi: BUSD_ABI,
     decimals: 18,

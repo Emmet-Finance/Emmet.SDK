@@ -12,6 +12,7 @@ const DAI: SupportedTokenType = {
         sparknet:"0xe0157e7a2C90A88371b508aD5818715680010086",
         athens3:"0x34356c720F14b7F647f79436d6d8891b3D048fd3",
         basegoerli:"0x34356c720F14b7F647f79436d6d8891b3D048fd3",
+        linea:"0xC1f1d4b70824Ac54207C00a894B5Ff5ee2219FdE"
     } as ContractAddress,
     abi: DAI_ABI,
     decimals: 18,

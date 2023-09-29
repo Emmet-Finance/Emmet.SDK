@@ -12,6 +12,7 @@ const ETH: SupportedTokenType = {
         sparknet:"0x239e6A9C05e55066C7e0fF899a32AA06A3AeafBD",
         athens3:"0x9FAdC446f0968946a1242D98E640a7A84c4D4A80",
         basegoerli:"0x9FAdC446f0968946a1242D98E640a7A84c4D4A80",
+        linea:"0x8aa7d89C0cc2891f830E86492b88a467a82c2F7E",
     } as ContractAddress,
     abi: WERC20,
     decimals: 18,

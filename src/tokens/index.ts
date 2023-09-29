@@ -11,7 +11,7 @@ import testnet_USDT from './testnet/usdt';
 export const testnetTokens = {
     // Coins
     ETH: testnet_ETH,
-    // Tokans
+    // Tokens
     BUSD: testnet_BUSD,
     DAI: testnet_DAI,
     USDT: testnet_USDT
