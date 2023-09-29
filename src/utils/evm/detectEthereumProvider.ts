@@ -1,4 +1,5 @@
-import { EthereumProvider, ethereum } from "../../interfaces";
+import { isMobile } from 'mobile-device-detect';
+import { EthereumProvider } from "../../interfaces";
 import EtherConstants from '../../wallets/EthreumConstants'
 
 /**
@@ -13,6 +14,24 @@ export function detectEthereumProvider<T = EthereumProvider>(
 ): Promise<T | null> {
 
     let handled = false;
+
+    let ethereum: any;
+    
+    // If on mobile browser:
+    if(window && isMobile && !(window as any).ethereum){
+
+        // Get the current url
+        let temp:string = window.location.href;
+        temp.replace("https://", "").replace("http://", "")
+        // Build a metamask deep link
+        const metamaskDeepLink = `https://metamask.app.link/dapp/${temp}`;
+        // Open Metamask
+        window.open(metamaskDeepLink)
+    } 
+
+    ethereum = (window as any).ethereum;
+    
+    console.log("detectEthereumProvider:ethereum", ethereum);
 
     return new Promise(resolve => {
 
@@ -35,6 +54,16 @@ export function detectEthereumProvider<T = EthereumProvider>(
                 return;
             }
             handled = true;
+
+            let _tempEthereum: any;
+            if (ethereum.providerMap) {
+                for (const record of ethereum.providerMap) {
+                    if (record[0] === 'MetaMask') {
+                        _tempEthereum = record[1]
+                    }
+                }
+            }
+            if (_tempEthereum) { ethereum = _tempEthereum }
 
             window?.removeEventListener(EtherConstants.ETH_INITIALISED, handleEthereum);
 

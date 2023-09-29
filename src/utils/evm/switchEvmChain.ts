@@ -1,6 +1,7 @@
 import { ALL_CHAINS } from "../../chains";
 import { EVMChain } from "../../types";
 import { formatChainName } from "../format";
+import { detectEthereumProvider } from "./detectEthereumProvider";
 
 /**
  * Switches or adds a new chain to the wallet
@@ -15,10 +16,12 @@ export async function switchEvmChain(chainName: string) {
     const newChain: EVMChain = ALL_CHAINS[formattedName];
     // Extract the chain Id & convert to 0x-prefixed hexadecimal
     const chainId: string = `0x${newChain.id.toString(16)}`
+    // Inject Ethereum Provider
+    const ethereum: any = await detectEthereumProvider();
 
     try {
         // Try switching the chain
-        await window?.ethereum?.request({
+        await ethereum.request({
             method: 'wallet_switchEthereumChain',
             params: [{ chainId }],
         });
@@ -29,13 +32,14 @@ export async function switchEvmChain(chainName: string) {
 
             try {
                 // Try adding a new chain to the wallet
-                await window?.ethereum?.request({
+                await ethereum.request({
                     method: 'wallet_addEthereumChain',
                     params: [
                         {
                             chainId: newChain.id,
                             chainName: newChain.name,
                             rpcUrls: newChain.rpcUrls,
+                            nativeCurrency: newChain.nativeCurrency
                         },
                     ],
                 });
