@@ -1,17 +1,19 @@
 
-import {Chain as wagmiChain} from './wagmi'
+import { Chain as wagmiChain } from './wagmi'
 import { ChainIdToNameMap, ChainNameToId, EVMChainMap } from '../interfaces/chains.js';
 import {
     MAINNETS,
     bsc,
     Mainnet,
     fuse,
+    linea,
     polygon,
-    
+
     TESTNETS,
     athens3,
     bscTestnet,
     goerli,
+    lineaTestnet,
     mumbai,
     sparknet,
 } from '../chains';
@@ -30,7 +32,7 @@ export type TChainName = TMainnetChainNames | TTestnetChainNames;
 
 export type EmmetChain = {
     bridge: string,
-    logo:string,
+    logo: string,
 }
 
 export type EVMChain = wagmiChain & EmmetChain;
@@ -42,6 +44,7 @@ export const mainnets: EVMChain[] = [
     bsc,
     Mainnet,
     fuse,
+    linea,
     polygon
 ];
 
@@ -52,6 +55,7 @@ export const testnets: EVMChain[] = [
     athens3,
     bscTestnet,
     goerli,
+    lineaTestnet,
     mumbai,
     sparknet,
 ];
@@ -89,7 +93,7 @@ export let EVMMainnets: EVMChainMap = {};
 export let EVMTestnets: EVMChainMap = {};
 
 // O(1) access to mainnets
-mainnets.map((net:EVMChain) => {
+mainnets.map((net: EVMChain) => {
 
     EVMMainnets[net.name] = net;
     mainnetChainIds[net.name] = net.id;
@@ -98,7 +102,7 @@ mainnets.map((net:EVMChain) => {
 });
 
 // O(1) access to testnets
-testnets.map((net:EVMChain) => {
+testnets.map((net: EVMChain) => {
 
     EVMTestnets[net.name] = net;
     testnetChainIds[net.name] = net.id;
@@ -109,7 +113,7 @@ testnets.map((net:EVMChain) => {
 /**
  * A combination of mainnet & testnet mappings: chainId => name
  */
-export const ChainIdToName: ChainIdToNameMap =  mainnetChainIdToName && testnetChainIdToName;
+export const ChainIdToName: ChainIdToNameMap = mainnetChainIdToName && testnetChainIdToName;
 
 /**
  * A combination of mainnet & testnet mappings: name => chainId
@@ -124,8 +128,9 @@ export const mainnetChainNameToIndex: { [key: string]: number } = {
     'BSC': 2,
     'Polygon': 3,
     'Fuse': 4,
-    'ZetaChain':5,
-    'BASE':6
+    'ZetaChain': 5,
+    'BASE': 6,
+    'Linea': 7
 };
 
 /**
@@ -137,16 +142,18 @@ export const mainnetChainIndexToName: { [key: number]: string } = {
     3: 'Polygon',
     4: 'Fuse',
     5: 'ZetaChain',
-    6: 'BASE'
+    6: 'BASE',
+    7: 'Linea',
 };
 
 export const BridgeChainIds = {
     goerli: 1,
     bsctestnet: 2,
-    mumbai:3,
-    sparknet:4,
-    athens3:5,
-    basegoerli:6
+    mumbai: 3,
+    sparknet: 4,
+    athens3: 5,
+    basegoerli: 6,
+    lineatestnet: 7,
 }
 
 /**
@@ -157,8 +164,9 @@ export const testnetChainNameToIndex: { [key: string]: number } = {
     'BSC Testnet': 2,
     'Mumbai': 3,
     'Sparknet': 4,
-    'Athens3':5,
-    'Base Goerli':6
+    'Athens3': 5,
+    'Base Goerli': 6,
+    'Linea Testnet': 7,
 };
 
 /**
@@ -170,7 +178,8 @@ export const testnetChainIndexToName: { [key: number]: string } = {
     3: 'Mumbai',
     4: 'Sparknet',
     5: 'Athens3',
-    6: 'Base Goerli'
+    6: 'Base Goerli',
+    7: 'Linea Testnet'
 };
 
 /**
