@@ -14,6 +14,7 @@ const BUSD = {
         athens3: "0x4D2E1a2Dd8fd4F60295d4F46F3B783dC5b5570F3",
         basegoerli: "0x4D2E1a2Dd8fd4F60295d4F46F3B783dC5b5570F3",
         lineatestnet: "0xA0C581aA8656277Fa390b0a234C7738514c99949",
+        shardeumbetanet: "0x4d2e1a2dd8fd4f60295d4f46f3b783dc5b5570f3",
     },
     abi: busd_1.default,
     decimals: 18,

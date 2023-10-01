@@ -33,6 +33,7 @@ export declare const BridgeChainIds: {
     athens3: number;
     basegoerli: number;
     lineatestnet: number;
+    shardeumbetanet: number;
 };
 export declare const testnetChainNameToIndex: {
     [key: string]: number;

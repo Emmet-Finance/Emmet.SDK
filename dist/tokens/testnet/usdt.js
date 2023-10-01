@@ -13,7 +13,8 @@ const USDT = {
         sparknet: "0x59805ca29E5217b4Ce8cb48e57F9C7EcF0D5604F",
         athens3: "0xd2cD72Ee3FbBf8fcbCCB7E8dB70220450F125AA6",
         basegoerli: "0xd2cD72Ee3FbBf8fcbCCB7E8dB70220450F125AA6",
-        lineatestnet: "0x3210D94CE1447BA7Eb36947064c403F032Bc2a84"
+        lineatestnet: "0x3210D94CE1447BA7Eb36947064c403F032Bc2a84",
+        shardeumbetanet: "0x9fadc446f0968946a1242d98e640a7a84c4d4a80",
     },
     abi: usdt_1.default,
     decimals: 18,
