@@ -31,7 +31,7 @@ const TESTNETS = {
     goerli,
     lineatestnet: lineaTestnet,
     mumbai,
-    shardeumBetanet,
+    shardeumbetanet:shardeumBetanet,
     sparknet
 }
 

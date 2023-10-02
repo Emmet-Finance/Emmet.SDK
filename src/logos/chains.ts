@@ -49,7 +49,7 @@ export const LOGO_POLYGON = `<svg width="20" height="20" viewBox="0 0 20 20" fil
 </defs>
 </svg>`;
 
-export const LOGO_SHARDEUM = `<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 20 20" class="Icon_Icon__yyBva Icon_white__OtjWP Icon_extraLarge__LM4XK Header_logo__76O4B">
+export const LOGO_SHARDEUM = `<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="20" height="20" viewBox="0 0 170 170" class="Icon_Icon__yyBva Icon_white__OtjWP Icon_extraLarge__LM4XK Header_logo__76O4B">
 <path fill="#010101" d="M115 171H1V1h170v170h-56m11.879-46.68c-3.412-6.134-6.824-12.267-9.26-18.512h23.746L98.575 31.74c-3.039 5.207-5.652 9.99-8.581 14.569-1.348 2.107-3.315 3.82-5.228 5.05-3.435-5.815-6.87-11.63-10.488-18.044-.592.196-1.184.391-2.257 1.009l-41.44 71.58c9.053 0 16.938 0 24.628.718-3.383 6.132-6.767 12.263-10.753 18.838.825.668 1.648 1.916 2.476 1.92 25.961.102 51.923.085 77.884.08.828 0 1.655-.067 2.483-.103a91.897 91.897 0 0 1-.42-3.038z">
 </path>
 <path fill="#F6F6F6" d="M84.993 52.02c1.686-1.89 3.653-3.603 5-5.71 2.93-4.58 5.543-9.362 8.583-14.57l42.789 74.068c-8.614 0-16.18 0-24.42.096-.676.096-1.055.05-1.166-.278A8759.39 8759.39 0 0 0 87.016 55.28c-.306-.53-1.253-.692-1.941-1.397a46.942 46.942 0 0 1-.082-1.861z">
