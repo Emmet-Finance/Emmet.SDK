@@ -6,7 +6,7 @@ export const shardeumBetanet: EVMChain = {
     bridge: '',
     logo: LOGO_SHARDEUM,
     // Common WAGMI part:
-    id: 8082,
+    id: 8081, // 0x1f91
     name: 'Shardeum Betanet',
     network: 'shmBetanet',
     nativeCurrency: { name: 'SHARDEUM', symbol: 'SHM', decimals: 18 },
