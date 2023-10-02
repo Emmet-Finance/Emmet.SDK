@@ -27,7 +27,7 @@ declare const TESTNETS: {
     goerli: import("..").EVMChain;
     lineatestnet: import("..").EVMChain;
     mumbai: import("..").EVMChain;
-    shardeumBetanet: import("..").EVMChain;
+    shardeumbetanet: import("..").EVMChain;
     sparknet: import("..").EVMChain;
 };
 declare const ALL_CHAINS: {
@@ -37,7 +37,7 @@ declare const ALL_CHAINS: {
     goerli: import("..").EVMChain;
     lineatestnet: import("..").EVMChain;
     mumbai: import("..").EVMChain;
-    shardeumBetanet: import("..").EVMChain;
+    shardeumbetanet: import("..").EVMChain;
     sparknet: import("..").EVMChain;
 };
 export { ALL_CHAINS, MAINNETS, base, bsc, Mainnet, fuse, linea, polygon, TESTNETS, athens3, basegoerli, bscTestnet, goerli, lineaTestnet, mumbai, shardeumBetanet, sparknet, };
