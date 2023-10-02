@@ -3,7 +3,7 @@ import { LOGO_SHARDEUM } from '../logos/chains';
 
 export const shardeumBetanet: EVMChain = {
     // Emmet.Bridge part:
-    bridge: '',
+    bridge: '0x6b30f76cece9f92d27f0e9ad78312e77709e74a5',
     logo: LOGO_SHARDEUM,
     // Common WAGMI part:
     id: 8081, // 0x1f91
