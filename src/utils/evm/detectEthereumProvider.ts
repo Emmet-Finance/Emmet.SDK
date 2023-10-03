@@ -30,8 +30,6 @@ export function detectEthereumProvider<T = EthereumProvider>(
     } 
 
     ethereum = (window as any).ethereum;
-    
-    console.log("detectEthereumProvider:ethereum", ethereum);
 
     return new Promise(resolve => {
 

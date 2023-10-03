@@ -17,6 +17,6 @@ export function getContract(
         abi,
         publicClient,
     });
-    console.log("getContract:", contract)
+
     return contract;
 }
