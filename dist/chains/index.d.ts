@@ -10,6 +10,7 @@ import { bscTestnet } from './bscTestnet';
 import { goerli } from './goerli';
 import { lineaTestnet } from './lineaTestnet';
 import { mumbai } from './mumbai';
+import { scrollSepolia } from './scrollSepolia';
 import { shardeumBetanet } from './shardeumBetanet';
 import { sparknet } from './sparknet';
 declare const MAINNETS: {
@@ -27,6 +28,7 @@ declare const TESTNETS: {
     goerli: import("..").EVMChain;
     lineatestnet: import("..").EVMChain;
     mumbai: import("..").EVMChain;
+    scrollSepolia: import("..").EVMChain;
     shardeumbetanet: import("..").EVMChain;
     sparknet: import("..").EVMChain;
 };
@@ -37,7 +39,8 @@ declare const ALL_CHAINS: {
     goerli: import("..").EVMChain;
     lineatestnet: import("..").EVMChain;
     mumbai: import("..").EVMChain;
+    scrollSepolia: import("..").EVMChain;
     shardeumbetanet: import("..").EVMChain;
     sparknet: import("..").EVMChain;
 };
-export { ALL_CHAINS, MAINNETS, base, bsc, Mainnet, fuse, linea, polygon, TESTNETS, athens3, basegoerli, bscTestnet, goerli, lineaTestnet, mumbai, shardeumBetanet, sparknet, };
+export { ALL_CHAINS, MAINNETS, base, bsc, Mainnet, fuse, linea, polygon, TESTNETS, athens3, basegoerli, bscTestnet, goerli, lineaTestnet, mumbai, scrollSepolia, shardeumBetanet, sparknet, };
