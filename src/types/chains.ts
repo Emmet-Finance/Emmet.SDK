@@ -15,6 +15,7 @@ import {
     goerli,
     lineaTestnet,
     mumbai,
+    scrollSepolia,
     shardeumBetanet,
     sparknet,
 } from '../chains';
@@ -58,6 +59,7 @@ export const testnets: EVMChain[] = [
     goerli,
     lineaTestnet,
     mumbai,
+    scrollSepolia,
     shardeumBetanet,
     sparknet,
 ];
@@ -134,6 +136,7 @@ export const mainnetChainNameToIndex: { [key: string]: number } = {
     'BASE': 6,
     'Linea': 7,
     'Shardeum': 8,
+    'Scroll':9,
 };
 
 /**
@@ -148,6 +151,7 @@ export const mainnetChainIndexToName: { [key: number]: string } = {
     6: 'BASE',
     7: 'Linea',
     8: 'Shardeum',
+    9: 'Scroll'
 };
 
 export const BridgeChainIds = {
@@ -159,6 +163,7 @@ export const BridgeChainIds = {
     basegoerli: 6,
     lineatestnet: 7,
     shardeumbetanet: 8,
+    scrollsepolia: 9,
 }
 
 /**
@@ -173,6 +178,7 @@ export const testnetChainNameToIndex: { [key: string]: number } = {
     'Base Goerli': 6,
     'Linea Testnet': 7,
     'Shardeum Betanet': 8,
+    'Scroll Sepolia': 9,
 };
 
 /**
@@ -187,6 +193,7 @@ export const testnetChainIndexToName: { [key: number]: string } = {
     6: 'Base Goerli',
     7: 'Linea Testnet',
     8: 'Shardeum Betanet',
+    9: 'Scroll Sepolia',
 };
 
 /**
