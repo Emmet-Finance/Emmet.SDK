@@ -14,7 +14,7 @@ const DAI: SupportedTokenType = {
         basegoerli:"0x45eAFd5844DCb7CEdF04158C71FaAb0D4380814d",
         lineatestnet:"0xC1f1d4b70824Ac54207C00a894B5Ff5ee2219FdE",
         shardeumbetanet:"0x34356c720f14b7f647f79436d6d8891b3d048fd3",
-        scrollsepolia:"0xCaBE7F9421405cd2f2fCe4a1c46157d55e576808",
+        scrollsepolia:"0x6439B16d1654E264eC9A293E09c42fAA7A48Ca98",
     } as ContractAddress,
     abi: DAI_ABI,
     decimals: 18,

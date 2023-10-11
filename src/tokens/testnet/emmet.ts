@@ -14,7 +14,7 @@ const EMMET: SupportedTokenType = {
         basegoerli:"0xD0915Be82a62Adbd6Af963A738989ECb41244B08",
         lineatestnet:"0x12622c184B951f0e297BAE8c459d695BB18a1bfA",
         shardeumbetanet:"0xf7A1cf348779c1AE88D7C85215d907C0f97953C1",
-        scrollsepolia:"0x29Cb761285C6DeD504526c77F25d1946F0D6e3D5",
+        scrollsepolia:"0xaf35A01c06529C66a56360c0afDb021512F078E7",
     } as ContractAddress,
     abi: EMMET_ABI,
     decimals: 18,

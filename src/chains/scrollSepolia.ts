@@ -3,7 +3,7 @@ import { LOGO_SCROLL } from '../logos/chains';
 
 export const scrollSepolia: EVMChain = {
     // Emmet.Bridge part:
-    bridge: '',
+    bridge: '0xFE6095f4eE9DDa119CD83D6fa76eE5Fc02Ae5199',
     logo: LOGO_SCROLL,
     // Common WAGMI part: https://github.com/wagmi-dev/viem/blob/main/src/chains/definitions/scrollSepolia.ts
     id: 534_351, // 0x8274f
