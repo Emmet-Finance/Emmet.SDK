@@ -15,6 +15,7 @@ const BUSD = {
         basegoerli: "0xF59bbE6673F8716879ad60bb961f717C718dbF90",
         lineatestnet: "0xA0C581aA8656277Fa390b0a234C7738514c99949",
         shardeumbetanet: "0x4d2e1a2dd8fd4f60295d4f46f3b783dc5b5570f3",
+        scrollsepolia: "0xf2851831674d1630f49a9c000A34d5A8E167577C",
     },
     abi: busd_1.default,
     decimals: 18,
