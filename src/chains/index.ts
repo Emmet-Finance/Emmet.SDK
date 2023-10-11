@@ -32,7 +32,7 @@ const TESTNETS = {
     goerli,
     lineatestnet: lineaTestnet,
     mumbai,
-    scrollSepolia,
+    scrollsepolia: scrollSepolia,
     shardeumbetanet:shardeumBetanet,
     sparknet
 }
