@@ -14,6 +14,7 @@ const ETH: SupportedTokenType = {
         basegoerli:"0xb4F82A7ba63AD72b3a0E1DE9cf604B69783dCEc0",
         lineatestnet:"0x8aa7d89C0cc2891f830E86492b88a467a82c2F7E",
         shardeumbetanet:"0xd2cd72ee3fbbf8fcbccb7e8db70220450f125aa6",
+        scrollsepolia:"0xd41358A148f929ED1f49325522D182f05837cfF2",
     } as ContractAddress,
     abi: WERC20,
     decimals: 18,

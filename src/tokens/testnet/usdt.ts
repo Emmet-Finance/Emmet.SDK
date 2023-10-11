@@ -14,6 +14,7 @@ const USDT: SupportedTokenType = {
         basegoerli:"0x29fb9F83290eAD77Ca4fa4A8491c1065b46b2e6E",
         lineatestnet:"0x3210D94CE1447BA7Eb36947064c403F032Bc2a84",
         shardeumbetanet:"0x9fadc446f0968946a1242d98e640a7a84c4d4a80",
+        scrollsepolia:"0xbfC41f18673B8Ab3e99Ec91cD5aE433DaC3b9F20",
     } as ContractAddress,
     abi: USDT_ABI,
     decimals: 18,

@@ -5,25 +5,25 @@ export const scrollSepolia: EVMChain = {
     // Emmet.Bridge part:
     bridge: '',
     logo: LOGO_SCROLL,
-    // Common WAGMI part:
+    // Common WAGMI part: https://github.com/wagmi-dev/viem/blob/main/src/chains/definitions/scrollSepolia.ts
     id: 534_351, // 0x8274f
     name: 'Scroll Sepolia',
     network: 'scroll-sepolia',
-    nativeCurrency: { name: 'SepoliaETH', symbol: 'SETH', decimals: 18 },
+    nativeCurrency: { name: 'SETH', symbol: 'SETH', decimals: 18 },
     rpcUrls: {
         default: {
-            http: ['https://sepolia-rpc.scroll.io'],
+            http: ['https://scroll-sepolia.blockpi.network/v1/rpc/public'],
             webSocket: ['wss://sepolia-rpc.scroll.io/ws'],
         },
         public: {
-            http: ['https://sepolia-rpc.scroll.io'],
+            http: ['https://scroll-sepolia.blockpi.network/v1/rpc/public'],
             webSocket: ['wss://sepolia-rpc.scroll.io/ws'],
         },
     },
     blockExplorers: {
         default: {
-            name: 'Etherscan',
-            url: 'https://sepolia.etherscan.io/',
+            name: 'Scroll',
+            url: 'https://sepolia.scrollscan.dev',
         },
     },
     contracts: {
