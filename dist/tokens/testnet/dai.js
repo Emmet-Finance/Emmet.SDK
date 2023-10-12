@@ -14,7 +14,7 @@ const DAI = {
         athens3: "0x34356c720F14b7F647f79436d6d8891b3D048fd3",
         basegoerli: "0x45eAFd5844DCb7CEdF04158C71FaAb0D4380814d",
         lineatestnet: "0xC1f1d4b70824Ac54207C00a894B5Ff5ee2219FdE",
-        shardeumbetanet: "0x34356c720f14b7f647f79436d6d8891b3d048fd3",
+        shardeumbetanet: "0x42e94b4143897d00de5d992956f1351d27b85b27",
         scrollsepolia: "0x6439B16d1654E264eC9A293E09c42fAA7A48Ca98",
     },
     abi: dai_1.default,

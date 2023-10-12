@@ -14,7 +14,7 @@ const USDT = {
         athens3: "0xd2cD72Ee3FbBf8fcbCCB7E8dB70220450F125AA6",
         basegoerli: "0x29fb9F83290eAD77Ca4fa4A8491c1065b46b2e6E",
         lineatestnet: "0x3210D94CE1447BA7Eb36947064c403F032Bc2a84",
-        shardeumbetanet: "0x9fadc446f0968946a1242d98e640a7a84c4d4a80",
+        shardeumbetanet: "0x03e68e7d56ab8c4a507af92bc855f3cfd5816c39",
         scrollsepolia: "0xE8f7f1d8963F56fa9808BBb8925A1Feb518AFC8e",
     },
     abi: usdt_1.default,
