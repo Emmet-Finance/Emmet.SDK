@@ -13,7 +13,7 @@ const ETH: SupportedTokenType = {
         athens3:"0x9FAdC446f0968946a1242D98E640a7A84c4D4A80",
         basegoerli:"0xb4F82A7ba63AD72b3a0E1DE9cf604B69783dCEc0",
         lineatestnet:"0x8aa7d89C0cc2891f830E86492b88a467a82c2F7E",
-        shardeumbetanet:"0xd2cd72ee3fbbf8fcbccb7e8db70220450f125aa6",
+        shardeumbetanet:"0x5231cbf50ed0f5e258fc2877dec0d359a2cfb9c5",
         scrollsepolia:"0xa2BfEd3d6E610D109EbFa9FCa5a5c3Abdc3eF3DF",
     } as ContractAddress,
     abi: WERC20,
