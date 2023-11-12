@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sparknet = exports.shardeumBetanet = exports.scrollSepolia = exports.mumbai = exports.lineaTestnet = exports.goerli = exports.bscTestnet = exports.basegoerli = exports.athens3 = exports.TESTNETS = exports.polygon = exports.linea = exports.fuse = exports.Mainnet = exports.bsc = exports.base = exports.MAINNETS = exports.ALL_CHAINS = void 0;
+exports.sparknet = exports.shardeumBetanet = exports.skaleTestnet = exports.scrollSepolia = exports.mumbai = exports.lineaTestnet = exports.goerli = exports.bscTestnet = exports.basegoerli = exports.athens3 = exports.TESTNETS = exports.polygon = exports.linea = exports.fuse = exports.Mainnet = exports.bsc = exports.base = exports.MAINNETS = exports.ALL_CHAINS = void 0;
 const bsc_1 = require("./bsc");
 Object.defineProperty(exports, "bsc", { enumerable: true, get: function () { return bsc_1.bsc; } });
 const ethereum_1 = require("./ethereum");
@@ -27,6 +27,8 @@ const mumbai_1 = require("./mumbai");
 Object.defineProperty(exports, "mumbai", { enumerable: true, get: function () { return mumbai_1.mumbai; } });
 const scrollSepolia_1 = require("./scrollSepolia");
 Object.defineProperty(exports, "scrollSepolia", { enumerable: true, get: function () { return scrollSepolia_1.scrollSepolia; } });
+const skaleTestnet_1 = require("./skaleTestnet");
+Object.defineProperty(exports, "skaleTestnet", { enumerable: true, get: function () { return skaleTestnet_1.skaleTestnet; } });
 const shardeumBetanet_1 = require("./shardeumBetanet");
 Object.defineProperty(exports, "shardeumBetanet", { enumerable: true, get: function () { return shardeumBetanet_1.shardeumBetanet; } });
 const sparknet_1 = require("./sparknet");
@@ -48,6 +50,7 @@ const TESTNETS = {
     lineatestnet: lineaTestnet_1.lineaTestnet,
     mumbai: mumbai_1.mumbai,
     scrollsepolia: scrollSepolia_1.scrollSepolia,
+    skale: skaleTestnet_1.skaleTestnet,
     shardeumbetanet: shardeumBetanet_1.shardeumBetanet,
     sparknet: sparknet_1.sparknet
 };

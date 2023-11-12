@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LOGO_ZETA_CHAIN = exports.LOGO_SHARDEUM = exports.LOGO_SCROLL = exports.LOGO_POLYGON = exports.LINEA_LOGO = exports.LOGO_FUSE = exports.LOGO_ETHEREUM = exports.LOGO_BSC = exports.LOGO_BASE = void 0;
+exports.LOGO_ZETA_CHAIN = exports.LOGO_SHARDEUM = exports.LOGO_SKALE = exports.LOGO_SCROLL = exports.LOGO_POLYGON = exports.LINEA_LOGO = exports.LOGO_FUSE = exports.LOGO_ETHEREUM = exports.LOGO_BSC = exports.LOGO_BASE = void 0;
 exports.LOGO_BASE = `<svg width="20" height="20" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M54.921 110.034C85.359 110.034 110.034 85.402 110.034 55.017C110.034 24.6319 85.359 0 54.921 0C26.0432 0 2.35281 22.1714 0 50.3923H72.8467V59.6416H3.9565e-07C2.35281 87.8625 26.0432 110.034 54.921 110.034Z" fill="#0052FF"/>
 </svg>`;
@@ -61,6 +61,13 @@ exports.LOGO_SCROLL = `<svg width="24" height="24" viewBox="0 0 24 24" fill="non
 </path>
 <path d="M17.0139 9.48963H7.5979V8.13361H17.005C17.3669 8.13361 17.6669 8.43193 17.6669 8.81162C17.6757 9.18226 17.3757 9.48963 17.0139 9.48963Z" fill="#101010">
 </path>
+</svg>`;
+exports.LOGO_SKALE = `<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 128 128" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+<circle cx="64" cy="64" r="64"/>
+<g fill="#fff">
+<path d="m84.094 72.849c.288 2.083.856 3.639 1.701 4.67 1.547 1.877 4.196 2.815 7.949 2.815 2.248 0 4.073-.247 5.475-.742 2.66-.949 3.99-2.712 3.99-5.289 0-1.506-.66-2.671-1.979-3.496-1.32-.804-3.392-1.515-6.218-2.134l-4.825-1.082c-4.743-1.073-8.021-2.238-9.836-3.496-3.072-2.103-4.609-5.392-4.609-9.867 0-4.083 1.485-7.475 4.454-10.176 2.97-2.701 7.331-4.052 13.084-4.052 4.805 0 8.903 1.273 12.295 3.82 3.393 2.547 5.171 6.243 5.336 11.089h-9.156c-.165-2.743-1.361-4.691-3.588-5.846-1.484-.763-3.33-1.145-5.536-1.145-2.454 0-4.413.495-5.877 1.485s-2.196 2.371-2.196 4.145c0 1.629.721 2.846 2.165 3.65.928.536 2.907 1.165 5.939 1.887l7.856 1.886c3.444.825 6.042 1.928 7.795 3.31 2.722 2.145 4.083 5.248 4.083 9.31 0 4.166-1.593 7.625-4.779 10.378s-7.686 4.129-13.502 4.129c-5.938 0-10.609-1.356-14.011-4.068-3.403-2.711-5.104-6.438-5.104-11.181z" fill-rule="nonzero"/>
+<path d="m28 26v76h66v-7h-58v-62h58v-7z"/>
+</g>
 </svg>`;
 exports.LOGO_SHARDEUM = `<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="20" height="20" viewBox="0 0 170 170" class="Icon_Icon__yyBva Icon_white__OtjWP Icon_extraLarge__LM4XK Header_logo__76O4B">
 <path fill="#010101" d="M115 171H1V1h170v170h-56m11.879-46.68c-3.412-6.134-6.824-12.267-9.26-18.512h23.746L98.575 31.74c-3.039 5.207-5.652 9.99-8.581 14.569-1.348 2.107-3.315 3.82-5.228 5.05-3.435-5.815-6.87-11.63-10.488-18.044-.592.196-1.184.391-2.257 1.009l-41.44 71.58c9.053 0 16.938 0 24.628.718-3.383 6.132-6.767 12.263-10.753 18.838.825.668 1.648 1.916 2.476 1.92 25.961.102 51.923.085 77.884.08.828 0 1.655-.067 2.483-.103a91.897 91.897 0 0 1-.42-3.038z">

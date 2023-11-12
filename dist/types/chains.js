@@ -16,6 +16,7 @@ exports.testnets = [
     chains_1.lineaTestnet,
     chains_1.mumbai,
     chains_1.scrollSepolia,
+    chains_1.skaleTestnet,
     chains_1.shardeumBetanet,
     chains_1.sparknet,
 ];
@@ -47,6 +48,7 @@ exports.mainnetChainNameToIndex = {
     'Linea': 7,
     'Shardeum': 8,
     'Scroll': 9,
+    'Skale': 10
 };
 exports.mainnetChainIndexToName = {
     1: 'Mainnet',
@@ -57,7 +59,8 @@ exports.mainnetChainIndexToName = {
     6: 'BASE',
     7: 'Linea',
     8: 'Shardeum',
-    9: 'Scroll'
+    9: 'Scroll',
+    10: 'Skale'
 };
 exports.BridgeChainIds = {
     goerli: 1,
@@ -69,6 +72,7 @@ exports.BridgeChainIds = {
     lineatestnet: 7,
     shardeumbetanet: 8,
     scrollsepolia: 9,
+    skaletestnet: 10,
 };
 exports.testnetChainNameToIndex = {
     'Goerli': 1,
@@ -80,6 +84,7 @@ exports.testnetChainNameToIndex = {
     'Linea Testnet': 7,
     'Shardeum Betanet': 8,
     'Scroll Sepolia': 9,
+    'Skale Testnet': 10,
 };
 exports.testnetChainIndexToName = {
     1: 'Goerli',
@@ -91,6 +96,7 @@ exports.testnetChainIndexToName = {
     7: 'Linea Testnet',
     8: 'Shardeum Betanet',
     9: 'Scroll Sepolia',
+    10: 'Skale Testnet'
 };
 exports.allChainNameToIndex = exports.mainnetChainNameToIndex && exports.testnetChainNameToIndex;
 exports.allChainIndexToName = exports.mainnetChainIndexToName && exports.testnetChainIndexToName;
