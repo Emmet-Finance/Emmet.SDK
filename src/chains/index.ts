@@ -34,7 +34,7 @@ const TESTNETS = {
     lineatestnet: lineaTestnet,
     mumbai,
     scrollsepolia: scrollSepolia,
-    skale: skaleTestnet,
+    skaletestnet: skaleTestnet,
     shardeumbetanet:shardeumBetanet,
     sparknet
 }
