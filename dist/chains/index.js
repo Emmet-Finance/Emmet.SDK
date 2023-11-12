@@ -50,7 +50,7 @@ const TESTNETS = {
     lineatestnet: lineaTestnet_1.lineaTestnet,
     mumbai: mumbai_1.mumbai,
     scrollsepolia: scrollSepolia_1.scrollSepolia,
-    skale: skaleTestnet_1.skaleTestnet,
+    skaletestnet: skaleTestnet_1.skaleTestnet,
     shardeumbetanet: shardeumBetanet_1.shardeumBetanet,
     sparknet: sparknet_1.sparknet
 };

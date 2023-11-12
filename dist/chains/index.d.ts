@@ -30,7 +30,7 @@ declare const TESTNETS: {
     lineatestnet: import("..").EVMChain;
     mumbai: import("..").EVMChain;
     scrollsepolia: import("..").EVMChain;
-    skale: import("..").EVMChain;
+    skaletestnet: import("..").EVMChain;
     shardeumbetanet: import("..").EVMChain;
     sparknet: import("..").EVMChain;
 };
@@ -42,7 +42,7 @@ declare const ALL_CHAINS: {
     lineatestnet: import("..").EVMChain;
     mumbai: import("..").EVMChain;
     scrollsepolia: import("..").EVMChain;
-    skale: import("..").EVMChain;
+    skaletestnet: import("..").EVMChain;
     shardeumbetanet: import("..").EVMChain;
     sparknet: import("..").EVMChain;
 };
