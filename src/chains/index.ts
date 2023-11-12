@@ -13,6 +13,7 @@ import { goerli } from './goerli';
 import { lineaTestnet } from './lineaTestnet';
 import { mumbai } from './mumbai';
 import { scrollSepolia } from './scrollSepolia';
+import { skaleTestnet } from './skaleTestnet';
 import { shardeumBetanet } from './shardeumBetanet';
 import { sparknet } from './sparknet';
 
@@ -33,6 +34,7 @@ const TESTNETS = {
     lineatestnet: lineaTestnet,
     mumbai,
     scrollsepolia: scrollSepolia,
+    skale: skaleTestnet,
     shardeumbetanet:shardeumBetanet,
     sparknet
 }
@@ -57,6 +59,7 @@ export {
     lineaTestnet,
     mumbai,
     scrollSepolia,
+    skaleTestnet,
     shardeumBetanet,
     sparknet,
 }
