@@ -7,7 +7,7 @@ export const skaleTestnet: EVMChain = {
     logo: LOGO_SKALE,
     // Common WAGMI part: https://github.com/wagmi-dev/viem/blob/main/src/chains/definitions/skale/europaTestnet.ts
     id: 476_158_412,
-  name: 'SKALE | Europa Liquidity Hub Testnet',
+  name: 'SKALE Testnet',
   network: 'skale-europa-testnet',
   nativeCurrency: { name: 'sFUEL', symbol: 'sFUEL', decimals: 18 },
   rpcUrls: {
